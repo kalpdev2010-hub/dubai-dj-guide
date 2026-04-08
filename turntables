@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best DJ Turntables: Analog & DVS | Dubai DJ Guide</title>
+    <meta name="description" content="From home listening to club performance. Compare the best DJ turntables including the legendary Technics SL-1210 and the hybrid PLX-CRSS12.">
+    <style>
+        :root {
+            --primary: #ff4500;
+            --dark: #121212;
+            --gray: #2a2a2a;
+            --light: #1a1a1a;
+            --text-light: #ffffff;
+            --text-dark: #ffffff;
+        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--dark); color: var(--text-light); line-height: 1.6; }
+        header { text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, #000000, #2a2a2a); border-bottom: 3px solid var(--primary); }
+        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        header p { color: #aaaaaa; font-size: 1.2rem; max-width: 600px; margin: 10px auto; }
+        .nav-bar { text-align: center; margin-top: 20px; }
+        .back-btn { color: #aaaaaa; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: color 0.2s ease; }
+        .back-btn:hover { color: var(--primary); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 3rem; font-size: 2rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .tier-desc { color: #aaaaaa; font-size: 1.1rem; margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 2rem; }
+        .card { padding: 2rem; border-radius: 8px; transition: transform 0.2s ease; display: flex; flex-direction: column; background-color: var(--light); border: 1px solid #333; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .brand { color: var(--primary); font-size: 0.9rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: block; }
+        .hardware-img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 20px; }
+        .btn-amazon { display: inline-block; margin-top: auto; padding: 12px 20px; background-color: var(--primary); color: #ffffff; text-decoration: none; font-weight: bold; border-radius: 5px; text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DJ Turntables</h1>
+        <p>The foundation of DJ culture. Experience the tactile soul of vinyl mixing.</p>
+        <div class="nav-bar"><a href="index.html" class="back-btn">← Back to Main Guide</a></div>
+    </header>
+    <div class="container">
+        <section>
+            <h2>1. Home Preference</h2>
+            <p class="tier-desc">Ideal for home listening, digitizing vinyl collections, and learning the fundamentals of platter control without the high club-gear price tag.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="plx-500.png" alt="PLX-500" class="hardware-img" loading="lazy">
+                    <h3>PLX-500</h3><span class="brand">Pioneer DJ</span>
+                    <p>High-torque direct drive turntable that produces a warm, clear analog sound. Features a USB output to easily digitize your vinyl collection into high-quality digital files.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="rp-4000mk2.png" alt="RP-4000MK2" class="hardware-img" loading="lazy">
+                    <h3>RP-4000MK2</h3><span class="brand">Reloop</span>
+                    <p>A rugged, high-torque turntable designed for professional use. Features a redesigned top panel and metallic buttons for a tactile, high-end feel during every mix.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Club Preference</h2>
+            <p class="tier-desc">Heavyweight machines built to withstand the intense vibrations of a loud nightclub while delivering rock-solid pitch stability.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="plx-1000.png" alt="PLX-1000" class="hardware-img" loading="lazy">
+                    <h3>PLX-1000</h3><span class="brand">Pioneer DJ</span>
+                    <p>A modern classic engineered for the professional booth. Delivers high-torque direct drive and excellent vibration dampening for flawlessly stable playback in loud environments.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="rp-7000mk2.png" alt="RP-7000MK2" class="hardware-img" loading="lazy">
+                    <h3>RP-7000MK2</h3><span class="brand">Reloop</span>
+                    <p>The "Technics Killer" for many pros, offering adjustable torque and a rock-solid build. Perfect for DJs who need a reliable workhorse for touring and heavy scratching.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="rp-8000mk2.png" alt="RP-8000MK2" class="hardware-img" loading="lazy">
+                    <h3>RP-8000MK2</h3><span class="brand">Reloop</span>
+                    <p>A hybrid turntable that adds MIDI controls for Serato DJ Pro. Control pads directly on the deck let you trigger cues and loops without touching your laptop.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Flagship King</h2>
+            <p class="tier-desc">The absolute pinnacle of vinyl technology. The industry standard for decades meets the cutting edge of digital-analog hybrid performance.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="sl1210.png" alt="SL1210" class="hardware-img" loading="lazy">
+                    <h3>SL-1210 MK7</h3><span class="brand">Technics</span>
+                    <p>The undisputed legend. With a coreless direct-drive motor and unmatched vibration isolation, it remains the gold standard for every serious DJ worldwide.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="plx-crss12.png" alt="PLX-CRSS12" class="hardware-img" loading="lazy">
+                    <h3>PLX-CRSS12</h3><span class="brand">Pioneer DJ</span>
+                    <p>A game-changing hybrid that offers tonearm-free DVS control. Eliminate needle skipping forever while maintaining the authentic feel of a motorized analog platter.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
