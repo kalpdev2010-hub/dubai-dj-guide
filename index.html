@@ -7,11 +7,12 @@
     <meta name="description" content="The ultimate guide to DJ software and hardware. Compare controllers, standalones, mixers, and turntables with pro insights.">
     <style>
         :root {
-            --primary: #ff4500;
+            --primary: #ffcc00; /* Cinema Yellow */
             --dark: #121212;
             --gray: #2a2a2a;
             --light: #1a1a1a;
             --text-light: #ffffff;
+            --button-text: #121212; /* Dark text for yellow buttons */
         }
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -49,7 +50,7 @@
         .bg-dark { background-color: var(--gray); }
         .bg-light { background-color: var(--light); }
         .card h3 { margin-top: 0; font-size: 1.5rem; }
-        .tagline { display: inline-block; background: var(--primary); color: white; padding: 3px 10px; font-size: 0.8rem; border-radius: 20px; margin-bottom: 15px; font-weight: bold; align-self: flex-start; }
+        .tagline { display: inline-block; background: var(--primary); color: var(--button-text); padding: 5px 15px; font-size: 0.8rem; border-radius: 50px; margin-bottom: 15px; font-weight: bold; align-self: flex-start; }
         
         .hardware-img {
             width: 100%;
@@ -61,16 +62,16 @@
         .btn {
             display: inline-block;
             margin-top: auto;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: var(--primary);
-            color: #ffffff;
+            color: var(--button-text);
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.2s ease;
+            border-radius: 50px; /* Pill Shape */
+            transition: all 0.2s ease;
             text-align: center;
         }
-        .btn:hover { background-color: #cc3700; }
+        .btn:hover { background-color: #e6b800; }
     </style>
 </head>
 <body>
