@@ -5,94 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ Mixers | Dubai DJ Guide</title>
     <style>
-        :root { --primary: #ff4500; --dark: #121212; --light: #1a1a1a; --text: #ffffff; }
-        body { font-family: sans-serif; margin: 0; background-color: var(--dark); color: var(--text); }
-        header { text-align: center; padding: 3rem; background: #000; border-bottom: 3px solid var(--primary); }
+        :root { 
+            --primary: #ffcc00; 
+            --amazon: #28a745;  
+            --dark: #121212; 
+            --gray: #2a2a2a; 
+            --light: #1a1a1a; 
+            --text-light: #ffffff;
+            --text-dark: #121212; 
+        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--text-light); line-height: 1.6; }
+        header { text-align: center; padding: 1.5rem 2rem; background: linear-gradient(135deg, #000000, #2a2a2a); border-bottom: 3px solid var(--primary); }
+        
+        .btn-home { display: inline-block; margin-top: 15px; padding: 10px 25px; background-color: var(--gray); color: var(--text-light); text-decoration: none; font-weight: bold; border-radius: 50px; border: 1px solid #444; transition: all 0.2s ease; }
+        .btn-home:hover { background-color: var(--primary); color: var(--text-dark); border-color: var(--primary); }
+
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { padding: 2rem; background: var(--light); border: 1px solid #333; display: flex; flex-direction: column; border-radius: 8px; }
-        .brand { color: var(--primary); font-weight: bold; margin-bottom: 10px; display: block; }
-        .btn-amazon { margin-top: auto; padding: 12px; background: var(--primary); color: #fff; text-decoration: none; text-align: center; border-radius: 5px; }
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 3rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 2rem; }
+        
+        .card { padding: 2rem; border-radius: 8px; background-color: var(--light); border: 1px solid #333; display: flex; flex-direction: column; transition: transform 0.2s ease; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .card h3 { margin-top: 0; font-size: 1.4rem; margin-bottom: 5px; }
+        .brand { color: var(--primary); font-size: 0.9rem; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
+        .card p { flex-grow: 1; color: #cccccc; font-size: 0.95rem; }
+        
+        .btn-amazon { margin-top: auto; padding: 12px 25px; background-color: var(--amazon); color: #fff; text-decoration: none; font-weight: bold; border-radius: 50px; text-align: center; transition: background 0.2s ease; display: block; width: 100%; box-sizing: border-box; }
+        .btn-amazon:hover { background-color: #218838; }
+
+        .filter-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem; justify-content: center; align-items: center; }
+        .filter-btn { background: var(--gray); border: 1px solid #444; color: var(--text-light); padding: 10px 25px; border-radius: 50px; cursor: pointer; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
+        .filter-btn:hover, .filter-btn.active { background: var(--primary); color: var(--text-dark); border-color: var(--primary); }
     </style>
 </head>
 <body>
-    <header><h1>DJ Mixers</h1><p>The heart of your setup.</p></header>
+    <header>
+        <h1>DJ Mixers</h1>
+        <p>The heart of your setup.</p>
+        <a href="index.html" class="btn-home">← Home Page</a>
+    </header>
     <div class="container">
-        <section><h2>Battle Layout</h2><div class="grid">
-            <div class="card"><h3>DJM-S5</h3><span class="brand">Pioneer DJ</span><p>Entry scratch mixer with pro fader.</p><a href="#" class="btn-amazon">Check Price</a></div>
-            <div class="card"><h3>DJM-S7</h3><span class="brand">Pioneer DJ</span><p>Pro scratch power with performance pads.</p><a href="#" class="btn-amazon">Check Price</a></div>
-            <div class="card"><h3>DJM-S11</h3><span class="brand">Pioneer DJ</span><p>The championship standard battle mixer.</p><a href="#" class="btn-amazon">Check Price</a></div>
-            <div class="card"><h3>ELITE</h3><span class="brand">Reloop</span><p>DVS ready with dual USB ports.</p><a href="#" class="btn-amazon">Check Price</a></div>
+        <section><h2>1. Battle Layout</h2><div class="grid">
+            <div class="card"><h3>DJM-S5</h3><span class="brand">Pioneer DJ</span><p>Entry scratch mixer with pro fader.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>DJM-S7</h3><span class="brand">Pioneer DJ</span><p>Pro scratch power with performance pads.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>DJM-S11</h3><span class="brand">Pioneer DJ</span><p>The championship standard battle mixer.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>ELITE</h3><span class="brand">Reloop</span><p>DVS ready with dual USB ports.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
         </div></section>
-        <section><h2>Club Layout</h2><div class="grid">
-            <div class="card"><h3>DJM-750MK2</h3><span class="brand">Pioneer DJ</span><p>Club layout for your home setup.</p><a href="#" class="btn-amazon">Check Price</a></div>
-            <div class="card"><h3>RMX-95</h3><span class="brand">Reloop</span><p>Pro 4-channel hub with stems control.</p><a href="#" class="btn-amazon">Check Price</a></div>
-            <div class="card"><h3>DJM-V5</h3><span class="brand">Alpha Theta</span><p>Next-gen 3-channel club precision.</p><a href="#" class="btn-amazon">Check Price</a></div>
+        <section><h2>2. Club Layout</h2><div class="grid">
+            <div class="card"><h3>DJM-750MK2</h3><span class="brand">Pioneer DJ</span><p>Club layout for your home setup.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>RMX-95</h3><span class="brand">Reloop</span><p>Pro 4-channel hub with stems control.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>DJM-V5</h3><span class="brand">Alpha Theta</span><p>Next-gen 3-channel club precision.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
         </div></section>
-        <section><h2>Flagship</h2><div class="grid">
-            <div class="card"><h3>DJM-V10LF</h3><span class="brand">Pioneer DJ</span><p>6-channel sonic powerhouse.</p><a href="#" class="btn-amazon">Check Price</a></div>
-            <div class="card"><h3>DJM-A9</h3><span class="brand">Pioneer DJ</span><p>The undisputed global club standard.</p><a href="#" class="btn-amazon">Check Price</a></div>
-            <div class="card"><h3>EUPHONIA</h3><span class="brand">Alpha Theta</span><p>Premium rotary mixer for audiophiles.</p><a href="#" class="btn-amazon">Check Price</a></div>
+        <section><h2>3. Flagship</h2><div class="grid">
+            <div class="card"><h3>DJM-V10LF</h3><span class="brand">Pioneer DJ</span><p>6-channel sonic powerhouse.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>DJM-A9</h3><span class="brand">Pioneer DJ</span><p>The undisputed global club standard.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>EUPHONIA</h3><span class="brand">Alpha Theta</span><p>Premium rotary mixer for audiophiles.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
         </div></section>
     </div>
-    <script>
-        document.querySelectorAll('.card').forEach(card => {
-            const name = card.querySelector('h3').innerText;
-            const brand = card.querySelector('.brand').innerText;
-            card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
-        });
-    </script>
-    <style>
-        .filter-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem; justify-content: center; }
-        .filter-btn { background: var(--gray); border: 1px solid #444; color: white; padding: 8px 18px; border-radius: 20px; cursor: pointer; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
-        .filter-btn:hover, .filter-btn.active { background: var(--primary); border-color: var(--primary); }
-    </style>
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const container = document.querySelector('.container');
             const sections = document.querySelectorAll('section');
-            
-            // Create the container for the buttons
             const filterNav = document.createElement('div');
             filterNav.className = 'filter-nav';
             
-            // Create the "All" button
+            const filterIcon = document.createElement('div');
+            filterIcon.innerHTML = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>`;
+            filterNav.appendChild(filterIcon);
+
             const allBtn = document.createElement('button');
             allBtn.className = 'filter-btn active';
             allBtn.innerText = 'All Gear';
             allBtn.onclick = () => filterSelection('all', allBtn);
             filterNav.appendChild(allBtn);
             
-            // Create a button for every section automatically
             sections.forEach((sec, index) => {
-                // Gets the title (e.g., "1. Kids Zone") and removes the number
                 const title = sec.querySelector('h2').innerText.replace(/^\d+\.\s*/, ''); 
                 sec.dataset.filter = 'tier-' + index; 
-                
                 const btn = document.createElement('button');
                 btn.className = 'filter-btn';
                 btn.innerText = title;
                 btn.onclick = () => filterSelection('tier-' + index, btn);
                 filterNav.appendChild(btn);
             });
-            
-            // Put the buttons at the very top of the page
             container.insertBefore(filterNav, container.firstChild);
             
-            // The logic to hide/show sections when clicked
             function filterSelection(filterId, activeBtn) {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                 activeBtn.classList.add('active');
-                
                 sections.forEach(sec => {
-                    if (filterId === 'all' || sec.dataset.filter === filterId) {
-                        sec.style.display = 'block';
-                    } else {
-                        sec.style.display = 'none';
-                    }
+                    sec.style.display = (filterId === 'all' || sec.dataset.filter === filterId) ? 'block' : 'none';
                 });
             }
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            const name = card.querySelector('h3').innerText;
+            const brand = card.querySelector('.brand').innerText;
+            card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
         });
     </script>
 </body>
