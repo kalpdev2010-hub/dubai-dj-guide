@@ -3,239 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best DJ Controllers: Beginner to Club Standard | Dubai DJ Guide</title>
-    <meta name="description" content="Discover the best DJ controllers for every skill level. From entry-level bedroom setups to 4-channel flagship club gear, find your perfect mix.">
+    <title>Best DJ Controllers | Dubai DJ Guide</title>
     <style>
-        :root {
-            --primary: #ff4500;
-            --dark: #121212;
-            --gray: #2a2a2a;
-            --light: #1a1a1a;
-            --text-light: #ffffff;
-            --text-dark: #ffffff;
-        }
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--dark);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #000000, #2a2a2a);
-            border-bottom: 3px solid var(--primary);
-        }
-        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        header p { color: #aaaaaa; font-size: 1.2rem; max-width: 600px; margin: 10px auto; }
-        
-        /* Navigation / Back Button */
-        .nav-bar { text-align: center; margin-top: 20px; }
-        .back-btn { color: #aaaaaa; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: color 0.2s ease; }
-        .back-btn:hover { color: var(--primary); }
-
+        :root { --primary: #ff4500; --dark: #121212; --gray: #2a2a2a; --light: #1a1a1a; --text: #ffffff; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--text); line-height: 1.6; }
+        header { text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, #000000, #2a2a2a); border-bottom: 3px solid var(--primary); }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 3rem; font-size: 2rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        .tier-desc { color: #aaaaaa; font-size: 1.1rem; margin-bottom: 2rem; }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 2rem;
-        }
-        .card {
-            padding: 2rem;
-            border-radius: 8px;
-            transition: transform 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            background-color: var(--light); 
-            border: 1px solid #333;
-        }
-        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .card h3 { margin-top: 0; font-size: 1.4rem; margin-bottom: 5px; }
-        .brand { color: var(--primary); font-size: 0.9rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: block; }
-        .card p { font-size: 0.95rem; color: #cccccc; flex-grow: 1; }
-        
-        /* Image Box Formatting */
-        .hardware-img {
-            width: 100%;
-            height: 180px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
-
-        /* Affiliate Button */
-        .btn-amazon {
-            display: inline-block;
-            margin-top: auto;
-            padding: 12px 20px;
-            background-color: var(--primary);
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.2s ease;
-            text-align: center;
-        }
-        .btn-amazon:hover { background-color: #cc3700; }
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 3rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 2rem; }
+        .card { padding: 2rem; border-radius: 8px; background-color: var(--light); border: 1px solid #333; display: flex; flex-direction: column; }
+        .brand { color: var(--primary); font-size: 0.9rem; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
+        .hardware-img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 20px; }
+        .btn-amazon { margin-top: auto; padding: 12px 20px; background-color: var(--primary); color: #fff; text-decoration: none; font-weight: bold; border-radius: 5px; text-align: center; }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>DJ Controllers</h1>
-        <p>From bedroom beginnings to main-stage domination. Choose your perfect all-in-one setup.</p>
-        <div class="nav-bar">
-            <a href="index.html" class="back-btn">← Back to Main Guide</a>
-        </div>
-    </header>
-
+    <header><h1>DJ Controllers</h1><p>Choose your perfect all-in-one setup.</p></header>
     <div class="container">
-        
-        <section>
-            <h2>1. The Kids Zone</h2>
-            <p class="tier-desc">Fun, highly interactive, and incredibly easy to use. The perfect starting point for the youngest aspiring DJs to learn the absolute basics of mixing.</p>
-            <div class="grid">
-                <div class="card">
-                    <img src="ddj-flx2.png" alt="DDJ-FLX2" class="hardware-img" loading="lazy">
-                    <h3>DDJ-FLX2</h3>
-                    <span class="brand">Alpha Theta</span>
-                    <p>The perfect ultra-compact entry point for the youngest aspiring DJs. Connects seamlessly to smartphones and tablets to mix tracks right from streaming apps.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="partymixlive.png" alt="Party Mix Live" class="hardware-img" loading="lazy">
-                    <h3>Party Mix Live</h3>
-                    <span class="brand">Numark</span>
-                    <p>Built-in speakers and a built-in LED light show turn any bedroom into an instant party. An incredibly fun and engaging way to learn the basics of beatmatching.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="buddy.png" alt="Buddy" class="hardware-img" loading="lazy">
-                    <h3>Buddy</h3>
-                    <span class="brand">Reloop</span>
-                    <p>Designed closely with Algoriddim djay for tight integration with mobile devices. Features dedicated pads and controls in a rugged, highly portable frame.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="djstarterkit.png" alt="DJ Starter Kit" class="hardware-img" loading="lazy">
-                    <h3>DJ Starter Kit</h3>
-                    <span class="brand">Hercules</span>
-                    <p>A complete beginner ecosystem that includes the controller, monitor speakers, and headphones. Everything a kid needs to unbox and start mixing immediately.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Beginner (Entry-Level)</h2>
-            <p class="tier-desc">The industry standards for learning to mix properly. Built to map perfectly to professional software without overwhelming you with complex features.</p>
-            <div class="grid">
-                <div class="card">
-                    <img src="ddj-flx4.png" alt="DDJ-FLX4" class="hardware-img" loading="lazy">
-                    <h3>DDJ-FLX4</h3>
-                    <span class="brand">Pioneer DJ</span>
-                    <p>The undisputed king of beginner controllers, mirroring the club-standard Pioneer layout. Features smart mixing tools and seamless integration with both Rekordbox and Serato.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="ddj-rev1.png" alt="DDJ-REV1" class="hardware-img" loading="lazy">
-                    <h3>DDJ-REV1</h3>
-                    <span class="brand">Pioneer DJ</span>
-                    <p>The ultimate entry-level battle controller for aspiring scratch DJs. Features larger jog wheels and a mixer section designed specifically for open-format performance.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="mixtrackprofx.png" alt="Mixtrack Pro FX" class="hardware-img" loading="lazy">
-                    <h3>Mixtrack Pro FX</h3>
-                    <span class="brand">Numark</span>
-                    <p>Offers fantastic build quality and dedicated paddle triggers for firing off effects instantly. The long-throw pitch faders make learning manual beatmatching a breeze.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="mixtrackplatinumfx.png" alt="Mixtrack Platinum FX" class="hardware-img" loading="lazy">
-                    <h3>Mixtrack Platinum FX</h3>
-                    <span class="brand">Numark</span>
-                    <p>Upgrades the Pro version with built-in, high-res displays right inside the jog wheels. Keeps your eyes on the decks and off the laptop screen during your mix.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>3. Mid-Range (Prosumer)</h2>
-            <p class="tier-desc">For DJs stepping out of the bedroom and into the venue. Featuring professional XLR outputs, robust build quality, and 4-channel mixing capabilities.</p>
-            <div class="grid">
-                <div class="card">
-                    <img src="ddj-grv6.png" alt="DDJ-GRV6" class="hardware-img" loading="lazy">
-                    <h3>DDJ-GRV6</h3>
-                    <span class="brand">Alpha Theta</span>
-                    <p>A modern, highly advanced 4-channel controller with Groove Circuit technology for live remixing. Offers club-sized controls and professional outputs for serious mobile gigs.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="ddj-rev5.png" alt="DDJ-REV5" class="hardware-img" loading="lazy">
-                    <h3>DDJ-REV5</h3>
-                    <span class="brand">Pioneer DJ</span>
-                    <p>A performance powerhouse bridging the gap between beginner scratch gear and flagship turntables. Features advanced stem control and dedicated piano play modes for ultimate creativity.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="ns4fx.png" alt="NS4FX" class="hardware-img" loading="lazy">
-                    <h3>NS4FX</h3>
-                    <span class="brand">Numark</span>
-                    <p>A highly capable 4-channel controller with professional XLR outputs and dual microphone inputs. The perfect workhorse for mobile DJs handling weddings and corporate events.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="mixon8pro.png" alt="Mixon 8 Pro" class="hardware-img" loading="lazy">
-                    <h3>Mixon 8 Pro</h3>
-                    <span class="brand">Reloop</span>
-                    <p>A premium hybrid controller with stunning metal platters and deep Serato/djay Pro integration. Features four channels of robust control and dual USB ports for seamless DJ handoffs.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>4. Flagship (Club Standard)</h2>
-            <p class="tier-desc">Uncompromising, heavy-duty professional gear. Built to deliver the exact tactile feel, sound quality, and advanced features of a world-class nightclub setup.</p>
-            <div class="grid">
-                <div class="card">
-                    <img src="ddj-flx10.png" alt="DDJ-FLX10" class="hardware-img" loading="lazy">
-                    <h3>DDJ-FLX10</h3>
-                    <span class="brand">Pioneer DJ</span>
-                    <p>The ultimate 4-channel powerhouse that completely replaced the legendary DDJ-1000. Features advanced real-time stem separation and the exact feel of a Nexus club setup.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="one.png" alt="Rane ONE" class="hardware-img" loading="lazy">
-                    <h3>ONE</h3>
-                    <span class="brand">Rane</span>
-                    <p>A motorized 7-inch turntable controller that perfectly replicates the feel of real vinyl. The absolute standard for professional scratch DJs who want a compact, uncompromising setup.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="four.png" alt="Rane FOUR" class="hardware-img" loading="lazy">
-                    <h3>FOUR</h3>
-                    <span class="brand">Rane</span>
-                    <p>The world's first controller custom-built specifically for Serato's advanced Stems feature. Features dedicated vocal and instrumental separation buttons alongside legendary Rane build quality.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="performer.png" alt="Rane PERFORMER" class="hardware-img" loading="lazy">
-                    <h3>PERFORMER</h3>
-                    <span class="brand">Rane</span>
-                    <p>A massive, motorized 4-channel beast that brings true turntable feel to a full-sized chassis. Built for top-tier professionals demanding the absolute best in tactile control and audio quality.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-            </div>
-        </section>
+        <section><h2>1. Kids Zone</h2><div class="grid">
+            <div class="card"><img src="ddj-flx2.png" class="hardware-img"><h3>DDJ-FLX2</h3><span class="brand">Alpha Theta</span><p>Compact and fun entry for young DJs.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="partymix.png" class="hardware-img"><h3>PARTYMIXLIVE</h3><span class="brand">Numark</span><p>Built-in light show and speakers.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="buddy.png" class="hardware-img"><h3>BUDDY</h3><span class="brand">Reloop</span><p>Great for mobile and tablet mixing.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="starter.png" class="hardware-img"><h3>DJ STARTER KIT</h3><span class="brand">Hercules</span><p>Complete unbox-and-play bundle.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+        </div></section>
+        <section><h2>2. Beginner</h2><div class="grid">
+            <div class="card"><img src="flx4.png" class="hardware-img"><h3>DDJ-FLX4</h3><span class="brand">Pioneer DJ</span><p>The industry standard for learning.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="rev1.png" class="hardware-img"><h3>DDJ-REV1</h3><span class="brand">Pioneer DJ</span><p>Battle-style layout for scratch DJs.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="profx.png" class="hardware-img"><h3>MIXTRACKPROFX</h3><span class="brand">Numark</span><p>Pro features in a simple frame.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="platfx.png" class="hardware-img"><h3>MIXTRACKPLATINUMFX</h3><span class="brand">Numark</span><p>Displays built into the wheels.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+        </div></section>
+        <section><h2>3. Mid-Range</h2><div class="grid">
+            <div class="card"><img src="grv6.png" class="hardware-img"><h3>DDJ-GRV6</h3><span class="brand">Alpha Theta</span><p>Next-gen groove and remix control.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="rev5.png" class="hardware-img"><h3>DDJ-REV5</h3><span class="brand">Pioneer DJ</span><p>Large platters and stems control.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="ns4fx.png" class="hardware-img"><h3>NS4FX</h3><span class="brand">Numark</span><p>4-channel mobile DJ workhorse.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="mixon8.png" class="hardware-img"><h3>MIXON 8 PRO</h3><span class="brand">Reloop</span><p>Multi-platform pro controller.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+        </div></section>
+        <section><h2>4. Flagship</h2><div class="grid">
+            <div class="card"><img src="flx10.png" class="hardware-img"><h3>DDJ-FLX10</h3><span class="brand">Pioneer DJ</span><p>The ultimate club-standard rig.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="raneone.png" class="hardware-img"><h3>One</h3><span class="brand">Rane</span><p>Motorized platters for vinyl feel.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="ranefour.png" class="hardware-img"><h3>FOUR</h3><span class="brand">Rane</span><p>Unmatched stems and audio quality.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+            <div class="card"><img src="performer.png" class="hardware-img"><h3>PERFORMER</h3><span class="brand">Rane</span><p>Flagship motorized 4-channel power.</p><a href="#" class="btn-amazon">Check Price on Amazon</a></div>
+        </div></section>
     </div>
-
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+            const name = card.querySelector('h3').innerText;
+            const brand = card.querySelector('.brand').innerText;
+            card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
+        });
+    </script>
 </body>
 </html>
