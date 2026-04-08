@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best DJ Mixers in Dubai: Battle & Club | Dubai DJ Guide</title>
-    <meta name="description" content="Find the perfect DJ mixer for your setup in Dubai, UAE. Compare top battle, club, and rotary mixers from Pioneer DJ and Reloop.">
+    <title>Pro DJ Mixers for Battle & Club Setups | Dubai Guide</title>
+    <meta name="description" content="The ultimate guide to battle and club DJ mixers in Dubai. Compare top 2-channel, 4-channel, and rotary mixers from Pioneer DJ, Reloop, and AlphaTheta.">
     <style>
         :root { 
             --primary: #ffcc00; 
@@ -24,7 +24,7 @@
         .nav-pill.active { background-color: var(--primary); color: var(--text-dark); border-color: var(--primary); }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 3rem; }
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 3rem; color: #fff; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 2rem; }
         
         .card { padding: 2rem; border-radius: 8px; background-color: var(--light); border: 1px solid #333; display: flex; flex-direction: column; transition: transform 0.2s ease; }
@@ -45,9 +45,9 @@
     <header>
         <h1>DJ Mixers</h1>
         <p>The heart of your setup.</p>
-        
         <div class="quick-nav">
             <a href="index.html" class="nav-pill">Home</a>
+            <a href="cdj.html" class="nav-pill">CDJs</a>
             <a href="controllers.html" class="nav-pill">Controllers</a>
             <a href="standalones.html" class="nav-pill">Standalones</a>
             <a href="mixers.html" class="nav-pill active">Mixers</a>
@@ -80,17 +80,11 @@
             const sections = document.querySelectorAll('section');
             const filterNav = document.createElement('div');
             filterNav.className = 'filter-nav';
-            
-            const filterIcon = document.createElement('div');
-            filterIcon.innerHTML = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>`;
-            filterNav.appendChild(filterIcon);
-
             const allBtn = document.createElement('button');
             allBtn.className = 'filter-btn active';
             allBtn.innerText = 'All Gear';
             allBtn.onclick = () => filterSelection('all', allBtn);
             filterNav.appendChild(allBtn);
-            
             sections.forEach((sec, index) => {
                 const title = sec.querySelector('h2').innerText.replace(/^\d+\.\s*/, ''); 
                 sec.dataset.filter = 'tier-' + index; 
@@ -101,16 +95,12 @@
                 filterNav.appendChild(btn);
             });
             container.insertBefore(filterNav, container.firstChild);
-            
             function filterSelection(filterId, activeBtn) {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                 activeBtn.classList.add('active');
-                sections.forEach(sec => {
-                    sec.style.display = (filterId === 'all' || sec.dataset.filter === filterId) ? 'block' : 'none';
-                });
+                sections.forEach(sec => { sec.style.display = (filterId === 'all' || sec.dataset.filter === filterId) ? 'block' : 'none'; });
             }
         });
-
         document.querySelectorAll('.card').forEach(card => {
             const name = card.querySelector('h3').innerText;
             const brand = card.querySelector('.brand').innerText;
