@@ -42,5 +42,58 @@
             card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
         });
     </script>
+    <style>
+        .filter-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem; justify-content: center; }
+        .filter-btn { background: var(--gray); border: 1px solid #444; color: white; padding: 8px 18px; border-radius: 20px; cursor: pointer; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
+        .filter-btn:hover, .filter-btn.active { background: var(--primary); border-color: var(--primary); }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector('.container');
+            const sections = document.querySelectorAll('section');
+            
+            // Create the container for the buttons
+            const filterNav = document.createElement('div');
+            filterNav.className = 'filter-nav';
+            
+            // Create the "All" button
+            const allBtn = document.createElement('button');
+            allBtn.className = 'filter-btn active';
+            allBtn.innerText = 'All Gear';
+            allBtn.onclick = () => filterSelection('all', allBtn);
+            filterNav.appendChild(allBtn);
+            
+            // Create a button for every section automatically
+            sections.forEach((sec, index) => {
+                // Gets the title (e.g., "1. Kids Zone") and removes the number
+                const title = sec.querySelector('h2').innerText.replace(/^\d+\.\s*/, ''); 
+                sec.dataset.filter = 'tier-' + index; 
+                
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.innerText = title;
+                btn.onclick = () => filterSelection('tier-' + index, btn);
+                filterNav.appendChild(btn);
+            });
+            
+            // Put the buttons at the very top of the page
+            container.insertBefore(filterNav, container.firstChild);
+            
+            // The logic to hide/show sections when clicked
+            function filterSelection(filterId, activeBtn) {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                activeBtn.classList.add('active');
+                
+                sections.forEach(sec => {
+                    if (filterId === 'all' || sec.dataset.filter === filterId) {
+                        sec.style.display = 'block';
+                    } else {
+                        sec.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
