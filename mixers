@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best DJ Mixers: Battle, Club & Rotary | Dubai DJ Guide</title>
+    <meta name="description" content="Find the perfect DJ mixer for your setup. Compare 2-channel battle mixers, 4-channel club standards, and premium flagship rotary mixers.">
+    <style>
+        :root {
+            --primary: #ff4500;
+            --dark: #121212;
+            --gray: #2a2a2a;
+            --light: #1a1a1a;
+            --text-light: #ffffff;
+            --text-dark: #ffffff;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #000000, #2a2a2a);
+            border-bottom: 3px solid var(--primary);
+        }
+        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        header p { color: #aaaaaa; font-size: 1.2rem; max-width: 600px; margin: 10px auto; }
+        
+        .nav-bar { text-align: center; margin-top: 20px; }
+        .back-btn { color: #aaaaaa; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: color 0.2s ease; }
+        .back-btn:hover { color: var(--primary); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 3rem; font-size: 2rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .tier-desc { color: #aaaaaa; font-size: 1.1rem; margin-bottom: 2rem; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+        .card {
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--light); 
+            border: 1px solid #333;
+        }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .card h3 { margin-top: 0; font-size: 1.4rem; margin-bottom: 5px; }
+        .brand { color: var(--primary); font-size: 0.9rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: block; }
+        .card p { font-size: 0.95rem; color: #cccccc; flex-grow: 1; }
+        
+        .hardware-img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .btn-amazon {
+            display: inline-block;
+            margin-top: auto;
+            padding: 12px 20px;
+            background-color: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.2s ease;
+            text-align: center;
+        }
+        .btn-amazon:hover { background-color: #cc3700; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DJ Mixers</h1>
+        <p>The central command hub. Blend your audio, apply effects, and route your sound to the crowd.</p>
+        <div class="nav-bar">
+            <a href="index.html" class="back-btn">← Back to Main Guide</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2>1. Battle Layout</h2>
+            <p class="tier-desc">Designed specifically for scratch DJs and turntablists. These 2-channel mixers feature clean bottom halves to ensure your hands never hit a knob while juggling crossfaders.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="djm-s5.png" alt="DJM-S5" class="hardware-img" loading="lazy">
+                    <h3>DJM-S5</h3>
+                    <span class="brand">Pioneer DJ</span>
+                    <p>The perfect entry-level battle mixer with a striking red finish. Features the MAGVEL FADER PRO and convenient USB bus power for the ultimate portable scratch setup.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="djm-s7.png" alt="DJM-S7" class="hardware-img" loading="lazy">
+                    <h3>DJM-S7</h3>
+                    <span class="brand">Pioneer DJ</span>
+                    <p>A customizable 2-channel powerhouse loaded with 16 performance pads. Offers seamless Bluetooth connectivity so you can drop tracks instantly from your smartphone.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="djm-s11.png" alt="DJM-S11" class="hardware-img" loading="lazy">
+                    <h3>DJM-S11</h3>
+                    <span class="brand">Pioneer DJ</span>
+                    <p>The undisputed 2-channel battle champion with a massive 4.3-inch customizable touch screen. Delivers unparalleled control over Serato DJ Pro and rekordbox.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="elite.png" alt="ELITE" class="hardware-img" loading="lazy">
+                    <h3>ELITE</h3>
+                    <span class="brand">Reloop</span>
+                    <p>A high-performance DVS mixer developed in close collaboration with international scratch champions. Boasts dual USB ports making back-to-back DJ handoffs completely effortless.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Club Layout</h2>
+            <p class="tier-desc">The traditional 4-channel format found in venues worldwide. Built for layering tracks, smooth frequency blending, and extensive effects routing.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="djm-750mk2.png" alt="DJM-750MK2" class="hardware-img" loading="lazy">
+                    <h3>DJM-750MK2</h3>
+                    <span class="brand">Pioneer DJ</span>
+                    <p>The quintessential 4-channel stepping stone to the club standard. Inherits key features, layout, and heavy-duty FX from the NXS2 line for a professional mixing experience.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="rmx-95.png" alt="RMX-95" class="hardware-img" loading="lazy">
+                    <h3>RMX-95</h3>
+                    <span class="brand">Reloop</span>
+                    <p>A versatile 4-channel club mixer featuring a pristine dual-USB audio interface. Offers deep integration with djay PRO AI, including dedicated Neural Mix controls for real-time stem isolation.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="djm-v5.png" alt="DJM-V5" class="hardware-img" loading="lazy">
+                    <h3>DJM-V5</h3>
+                    <span class="brand">Alpha Theta</span>
+                    <p>A cutting-edge 3-channel mixer bridging the gap between high-end home setups and professional booths. Delivers brilliant sound clarity and an incredibly intuitive workflow.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Flagship</h2>
+            <p class="tier-desc">The pinnacle of audio engineering. These uncompromising machines take over festival mainstages and audiophile listening bars.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="djm-v10lf.png" alt="DJM-V10LF" class="hardware-img" loading="lazy">
+                    <h3>DJM-V10LF</h3>
+                    <span class="brand">Pioneer DJ</span>
+                    <p>A towering 6-channel behemoth featuring longer, ultra-precise channel faders. Designed specifically for techno and house maestros who demand absolute, surgical sonic control.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="djm-a9.png" alt="DJM-A9" class="hardware-img" loading="lazy">
+                    <h3>DJM-A9</h3>
+                    <span class="brand">Pioneer DJ</span>
+                    <p>The undisputed modern 4-channel club standard taking over the world's biggest main stages. Boasts next-generation sound quality, massive expanded FX, and seamless Bluetooth integration.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+                <div class="card">
+                    <img src="euphonia.png" alt="EUPHONIA" class="hardware-img" loading="lazy">
+                    <h3>EUPHONIA</h3>
+                    <span class="brand">Alpha Theta</span>
+                    <p>A breathtakingly elegant rotary mixer combining modern digital clarity with pure analog warmth. Custom-designed Rupert Neve Designs transformers deliver an unbelievably rich, immersive soundstage.</p>
+                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
