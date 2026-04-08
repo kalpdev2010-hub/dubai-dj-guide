@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best DJ Headphones in Dubai | Dubai DJ Guide</title>
+    <meta name="description" content="Discover the best professional DJ headphones in Dubai, UAE. Compare top models from Sennheiser, Pioneer DJ, AIAIAI, and V-Moda for your perfect mix.">
+    <style>
+        :root { 
+            --primary: #ffcc00; 
+            --amazon: #28a745;  
+            --dark: #121212; 
+            --gray: #2a2a2a; 
+            --light: #1a1a1a; 
+            --text-light: #ffffff;
+            --text-dark: #121212; 
+        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--text-light); line-height: 1.6; }
+        header { text-align: center; padding: 1.5rem 2rem; background: linear-gradient(135deg, #000000, #2a2a2a); border-bottom: 3px solid var(--primary); }
+        
+        .quick-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 1.5rem; }
+        .nav-pill { padding: 8px 20px; background-color: var(--gray); color: var(--text-light); text-decoration: none; font-weight: bold; border-radius: 50px; font-size: 0.85rem; border: 1px solid #444; transition: all 0.2s ease; }
+        .nav-pill:hover { background-color: #444; }
+        .nav-pill.active { background-color: var(--primary); color: var(--text-dark); border-color: var(--primary); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 1rem; }
+        
+        .card { padding: 2rem; border-radius: 8px; background-color: var(--light); border: 1px solid #333; display: flex; flex-direction: column; transition: transform 0.2s ease; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .card h3 { margin-top: 0; font-size: 1.4rem; margin-bottom: 5px; }
+        .brand { color: var(--primary); font-size: 0.9rem; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
+        .card p { flex-grow: 1; color: #cccccc; font-size: 0.95rem; }
+        
+        .btn-amazon { margin-top: auto; padding: 12px 25px; background-color: var(--amazon); color: #fff; text-decoration: none; font-weight: bold; border-radius: 50px; text-align: center; transition: background 0.2s ease; display: block; width: 100%; box-sizing: border-box; }
+        .btn-amazon:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DJ Headphones</h1>
+        <p>Crystal clear monitoring for flawless mixing.</p>
+        <div class="quick-nav">
+            <a href="index.html" class="nav-pill">Home</a>
+            <a href="controllers.html" class="nav-pill">Controllers</a>
+            <a href="standalones.html" class="nav-pill">Standalones</a>
+            <a href="mixers.html" class="nav-pill">Mixers</a>
+            <a href="turntables.html" class="nav-pill">Turntables</a>
+            <a href="speakers.html" class="nav-pill">Speakers</a>
+            <a href="headphones.html" class="nav-pill active">Headphones</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="grid">
+            <div class="card"><h3>TMA-2DJ</h3><span class="brand">AIAIAI</span><p>Modular professional DJ headphones with punchy and intense sound.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>HD25PLUS</h3><span class="brand">Sennheiser</span><p>The legendary DJ standard with extra cables and velour ear pads.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>HD25</h3><span class="brand">Sennheiser</span><p>The undisputed industry standard for lightweight, split-headband booth monitoring.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>HDJ-CX</h3><span class="brand">Pioneer DJ</span><p>Super lightweight professional on-ear DJ headphones designed for comfort.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>HDJ-X7</h3><span class="brand">Pioneer DJ</span><p>Professional over-ear headphones built to withstand the toughest touring booths.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>RHP-15</h3><span class="brand">Reloop</span><p>Sturdy, closed-back DJ headphones with deep and powerful sound characteristics.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>HF-175</h3><span class="brand">Numark</span><p>High-quality monitoring with plush earcups for long mixing sessions.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>HF-125</h3><span class="brand">Numark</span><p>Reliable, entry-level mixing headphones perfect for beginners.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>HFJ700</h3><span class="brand">Eikon</span><p>Professional closed-back headphones specifically tailored for accurate DJ monitoring.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+            <div class="card"><h3>M-10</h3><span class="brand">V-Moda</span><p>Premium metal build quality with signature immersive, bass-forward sound.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
+        </div>
+    </div>
+    
+    <script>
+        // Only handles Amazon link generation since there are no filter tabs here
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.card').forEach(card => {
+                const name = card.querySelector('h3').innerText;
+                const brand = card.querySelector('.brand').innerText;
+                card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
+            });
+        });
+    </script>
+</body>
+</html>
