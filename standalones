@@ -3,183 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Standalone DJ Systems | Dubai DJ Guide</title>
-    <meta name="description" content="Leave the laptop behind. Compare the best standalone DJ systems for mobile and club setups to find your perfect all-in-one rig.">
+    <title>Standalone DJ Systems | Dubai DJ Guide</title>
     <style>
-        :root {
-            --primary: #ff4500;
-            --dark: #121212;
-            --gray: #2a2a2a;
-            --light: #1a1a1a;
-            --text-light: #ffffff;
-            --text-dark: #ffffff;
-        }
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--dark);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #000000, #2a2a2a);
-            border-bottom: 3px solid var(--primary);
-        }
-        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        header p { color: #aaaaaa; font-size: 1.2rem; max-width: 600px; margin: 10px auto; }
-        
-        /* Navigation / Back Button */
-        .nav-bar { text-align: center; margin-top: 20px; }
-        .back-btn { color: #aaaaaa; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: color 0.2s ease; }
-        .back-btn:hover { color: var(--primary); }
-
+        :root { --primary: #ff4500; --dark: #121212; --light: #1a1a1a; --text: #ffffff; }
+        body { font-family: sans-serif; margin: 0; background-color: var(--dark); color: var(--text); }
+        header { text-align: center; padding: 3rem; background: #000; border-bottom: 3px solid var(--primary); }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 3rem; font-size: 2rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        .tier-desc { color: #aaaaaa; font-size: 1.1rem; margin-bottom: 2rem; }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 2rem;
-        }
-        .card {
-            padding: 2rem;
-            border-radius: 8px;
-            transition: transform 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            background-color: var(--light); 
-            border: 1px solid #333;
-        }
-        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .card h3 { margin-top: 0; font-size: 1.4rem; margin-bottom: 5px; }
-        .brand { color: var(--primary); font-size: 0.9rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: block; }
-        .card p { font-size: 0.95rem; color: #cccccc; flex-grow: 1; }
-        
-        /* Image Box Formatting */
-        .hardware-img {
-            width: 100%;
-            height: 180px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
-
-        /* Affiliate Button */
-        .btn-amazon {
-            display: inline-block;
-            margin-top: auto;
-            padding: 12px 20px;
-            background-color: var(--primary);
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.2s ease;
-            text-align: center;
-        }
-        .btn-amazon:hover { background-color: #cc3700; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { padding: 2rem; background: var(--light); border: 1px solid #333; display: flex; flex-direction: column; border-radius: 8px; }
+        .brand { color: var(--primary); font-weight: bold; margin-bottom: 10px; display: block; }
+        .btn-amazon { margin-top: auto; padding: 12px; background: var(--primary); color: #fff; text-decoration: none; text-align: center; border-radius: 5px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Standalone Systems</h1>
-        <p>Leave the laptop behind. All-in-one rigs with the software built right in.</p>
-        <div class="nav-bar">
-            <a href="index.html" class="back-btn">← Back to Main Guide</a>
-        </div>
-    </header>
-
+    <header><h1>Standalone Systems</h1><p>No laptop required.</p></header>
     <div class="container">
-        
-        <section>
-            <h2>1. Beginner (Entry-Level)</h2>
-            <p class="tier-desc">The perfect bridge to laptop-free mixing. Highly capable 2-channel systems ideal for casual gigs, house parties, and learning the standalone workflow.</p>
-            <div class="grid">
-                <div class="card">
-                    <img src="xdj-rr.png" alt="XDJ-RR" class="hardware-img" loading="lazy">
-                    <h3>XDJ-RR</h3>
-                    <span class="brand">Pioneer DJ</span>
-                    <p>A lightweight, 2-channel entry point into the Pioneer ecosystem. Perfectly maps the NXS2 club layout so you can transition to bigger stages with confidence.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="mixstreamproplus.png" alt="Mixstream Pro+" class="hardware-img" loading="lazy">
-                    <h3>Mixstream Pro+</h3>
-                    <span class="brand">Numark</span>
-                    <p>Features built-in monitor speakers and direct Wi-Fi streaming from Amazon Music and TIDAL. An incredibly fun, all-in-one party machine.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="mixstreamprogo.png" alt="Mixstream Pro Go" class="hardware-img" loading="lazy">
-                    <h3>Mixstream Pro Go</h3>
-                    <span class="brand">Numark</span>
-                    <p>Takes everything great about the Pro+ and adds a built-in rechargeable battery. The ultimate 100% wireless DJ experience for mixing literally anywhere.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Mid-Range (Prosumer)</h2>
-            <p class="tier-desc">Professional workhorses for serious mobile DJs. Boasting massive screens, premium audio routing, and road-ready build quality.</p>
-            <div class="grid">
-                <div class="card">
-                    <img src="xdj-rx3.png" alt="XDJ-RX3" class="hardware-img" loading="lazy">
-                    <h3>XDJ-RX3</h3>
-                    <span class="brand">Pioneer DJ</span>
-                    <p>Boasts the exact same massive 10.1-inch high-resolution touchscreen as the flagship CDJ-3000. The definitive 2-channel standard for pro mobile gigs.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="sclive4.png" alt="SC Live 4" class="hardware-img" loading="lazy">
-                    <h3>SC Live 4</h3>
-                    <span class="brand">Denon DJ</span>
-                    <p>Designed in collaboration with Amazon Music for exclusive high-res streaming. Offers true 4-channel standalone control and club-style sweep effects.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="primegoplus.png" alt="Prime Go+" class="hardware-img" loading="lazy">
-                    <h3>Prime Go+</h3>
-                    <span class="brand">Denon DJ</span>
-                    <p>The professional backpack-sized, battery-powered powerhouse. Delivers premium connectivity and flawless Engine DJ OS performance on the move.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>3. Flagship (Club Standard)</h2>
-            <p class="tier-desc">The absolute pinnacle of all-in-one engineering. Unmatched 4-deck capabilities, zero-latency wireless connectivity, and uncompromising sound output.</p>
-            <div class="grid">
-                <div class="card">
-                    <img src="xdj-az.png" alt="XDJ-AZ" class="hardware-img" loading="lazy">
-                    <h3>XDJ-AZ</h3>
-                    <span class="brand">Alpha Theta</span>
-                    <p>The new club-standard successor bringing 4-deck playback and built-in SonicLink wireless headphone connectivity. The cutting edge of standalone technology.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="prime4plus.png" alt="Prime 4+" class="hardware-img" loading="lazy">
-                    <h3>Prime 4+</h3>
-                    <span class="brand">Denon DJ</span>
-                    <p>An absolute beast featuring advanced real-time stem separation inside a standalone unit. Offers unmatched Zone Output routing for multi-room mobile events.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-                <div class="card">
-                    <img src="systemone.png" alt="System One" class="hardware-img" loading="lazy">
-                    <h3>System One</h3>
-                    <span class="brand">Rane</span>
-                    <p>The world's first motorized standalone system, bringing authentic vinyl feel to a laptop-free environment. Heavy-duty Rane build quality meets ultimate freedom.</p>
-                    <a href="#" class="btn-amazon">Check Price on Amazon</a>
-                </div>
-            </div>
-        </section>
+        <section><h2>Beginner</h2><div class="grid">
+            <div class="card"><h3>XDJ-RR</h3><span class="brand">Pioneer DJ</span><p>Standard club layout in a 2-channel rig.</p><a href="#" class="btn-amazon">Check Price</a></div>
+            <div class="card"><h3>MIXSTREAMPRO+</h3><span class="brand">Numark</span><p>Built-in speakers and streaming.</p><a href="#" class="btn-amazon">Check Price</a></div>
+            <div class="card"><h3>MIXSTREAMPROGO</h3><span class="brand">Numark</span><p>Battery-powered for total freedom.</p><a href="#" class="btn-amazon">Check Price</a></div>
+        </div></section>
+        <section><h2>Mid-Range</h2><div class="grid">
+            <div class="card"><h3>XDJ-RX3</h3><span class="brand">Pioneer DJ</span><p>Pro 2-channel system with huge screen.</p><a href="#" class="btn-amazon">Check Price</a></div>
+            <div class="card"><h3>SCLIVE4</h3><span class="brand">Denon DJ</span><p>4-channel power with Amazon Music.</p><a href="#" class="btn-amazon">Check Price</a></div>
+            <div class="card"><h3>PRIMEGO+</h3><span class="brand">Denon DJ</span><p>Pro features in a portable size.</p><a href="#" class="btn-amazon">Check Price</a></div>
+        </div></section>
+        <section><h2>Flagship</h2><div class="grid">
+            <div class="card"><h3>XDJ-AZ</h3><span class="brand">Alpha Theta</span><p>The ultimate club-ready centerpiece.</p><a href="#" class="btn-amazon">Check Price</a></div>
+            <div class="card"><h3>PRIME4+</h3><span class="brand">Denon DJ</span><p>The world's most powerful 4-channel system.</p><a href="#" class="btn-amazon">Check Price</a></div>
+            <div class="card"><h3>SYSTEMONE</h3><span class="brand">Rane</span><p>Motorized platters meet standalone freedom.</p><a href="#" class="btn-amazon">Check Price</a></div>
+        </div></section>
     </div>
-
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+            const name = card.querySelector('h3').innerText;
+            const brand = card.querySelector('.brand').innerText;
+            card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
+        });
+    </script>
 </body>
 </html>
