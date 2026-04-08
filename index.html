@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dubai DJ Guide: Master Your Setup</title>
-    <meta name="description" content="The ultimate guide to DJ software, hardware, and audio. Compare controllers, mixers, speakers, and headphones for your perfect setup.">
+    <title>Dubai DJ Equipment Guide | Controllers, Mixers & More</title>
+    <meta name="description" content="The ultimate personal guide to DJ software and hardware. Compare top controllers, standalone systems, mixers, and turntables in Dubai.">
     <style>
         :root {
             --primary: #ffcc00; 
@@ -14,119 +14,88 @@
             --text-light: #ffffff;
             --button-text: #121212; 
         }
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--dark);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        /* Shrunken Header */
-        header {
-            text-align: center;
-            padding: 1.5rem 2rem;
-            background: linear-gradient(135deg, #000000, #2a2a2a);
-            border-bottom: 3px solid var(--primary);
-        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--dark); color: var(--text-light); line-height: 1.6; }
+        header { text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, #000000, #2a2a2a); border-bottom: 3px solid var(--primary); }
         header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        header p { color: #aaaaaa; font-size: 1.1rem; max-width: 600px; margin: 10px auto; }
+        header p { color: #aaaaaa; font-size: 1.2rem; max-width: 600px; margin: 10px auto; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         
-        /* Home Page Smart Filter Nav */
-        .filter-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5rem; justify-content: center; align-items: center; }
-        .filter-btn { background: var(--gray); border: 1px solid #444; color: var(--text-light); padding: 10px 25px; border-radius: 50px; cursor: pointer; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; display: flex; align-items: center;}
-        .filter-btn:hover, .filter-btn.active { background: var(--primary); color: var(--button-text); border-color: var(--primary); }
+        /* Filter Styles */
+        .filter-wrapper { display: flex; align-items: center; gap: 15px; margin-bottom: 2rem; flex-wrap: wrap; }
+        .filter-icon { color: var(--primary); font-size: 1.5rem; }
+        .filter-btn { background: var(--gray); border: 1px solid #444; color: white; padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
+        .filter-btn:hover, .filter-btn.active { background: var(--primary); border-color: var(--primary); color: var(--button-text); }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; min-height: 60vh; }
-        
-        .section-title { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 1rem; font-size: 1.8rem; margin-bottom: 5px; }
-        .section-desc { color: #cccccc; margin-bottom: 2rem; margin-top: 0; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        
-        .card { padding: 2rem; border-radius: 8px; transition: transform 0.2s ease; display: flex; flex-direction: column; border: 1px solid #333; background-color: var(--light); }
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 2rem; font-size: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 2rem; }
+        .card { padding: 2rem; border-radius: 8px; transition: transform 0.2s ease; display: flex; flex-direction: column; border: 1px solid #333; }
         .card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .card h3 { margin-top: 0; font-size: 1.5rem; margin-bottom: 10px; }
-        
+        .bg-dark { background-color: var(--gray); }
+        .bg-light { background-color: var(--light); }
+        .card h3 { margin-top: 0; font-size: 1.5rem; }
         .tagline { display: inline-block; background: var(--primary); color: var(--button-text); padding: 5px 15px; font-size: 0.8rem; border-radius: 50px; margin-bottom: 15px; font-weight: bold; align-self: flex-start; }
-        .card p { flex-grow: 1; color: #cccccc; font-size: 0.95rem; }
-        
-        /* Category Images (Kept for visual navigation on Home Page) */
-        .hardware-img { width: 100%; height: 160px; object-fit: contain; margin-bottom: 15px; }
-
         .btn { display: inline-block; margin-top: auto; padding: 12px 25px; background-color: var(--primary); color: var(--button-text); text-decoration: none; font-weight: bold; border-radius: 50px; transition: all 0.2s ease; text-align: center; }
         .btn:hover { background-color: #e6b800; }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Dubai DJ Guide</h1>
         <p>The ultimate blueprint to understanding DJ software, building your perfect hardware setup, and pushing the right sound.</p>
-        
-        <div class="filter-nav">
-            <div id="filter-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
-            </div>
-            <button class="filter-btn active" onclick="filterHome('all', this)">All</button>
-            <button class="filter-btn" onclick="filterHome('software', this)">The Brains: Software</button>
-            <button class="filter-btn" onclick="filterHome('gear', this)">The Brawn: DJ Gear</button>
-            <button class="filter-btn" onclick="filterHome('audio', this)">The Sound: Audio</button>
-        </div>
     </header>
-
     <div class="container">
-        <section id="software" class="content-section">
-            <h2 class="section-title">The Brains: Choose Your Software</h2>
-            <p class="section-desc">Before you buy hardware, choose your ecosystem. These platforms power the world's biggest stages.</p>
+        
+        <div class="filter-wrapper">
+            <span class="filter-icon">Filter</span>
+            <button class="filter-btn active" onclick="filterSelection('all', this)">All</button>
+            <button class="filter-btn" onclick="filterSelection('software', this)">The Brains: Software</button>
+            <button class="filter-btn" onclick="filterSelection('hardware', this)">The Brawn: DJ Gear</button>
+            <button class="filter-btn" onclick="filterSelection('sound', this)">The Sound: Audio</button>
+        </div>
+
+        <section data-category="software">
+            <h2>The Brains: Choose Your Software</h2>
+            <p>Before you buy hardware, choose your ecosystem. These platforms power the world's biggest stages.</p>
             <div class="grid">
-                <div class="card">
-                    <h3>Rekordbox</h3>
-                    <span class="tagline">The Club Standard</span>
+                <div class="card bg-dark">
+                    <h3>Rekordbox</h3><span class="tagline">The Club Standard</span>
                     <p>The industry leader. Essential for DJs who want to play on Pioneer CDJs in global venues.</p>
                 </div>
-                <div class="card">
-                    <h3>Serato DJ Pro</h3>
-                    <span class="tagline">The Performance King</span>
-                    <p>The gold standard for scratch DJs and open-format performance. Known for ultimate stability.</p>
+                <div class="card bg-dark">
+                    <h3>Serato DJ Pro</h3><span class="tagline">The Performance King</span>
+                    <p>The gold standard for scratch DJs and open-format performance.</p>
                 </div>
-                <div class="card">
-                    <h3>Traktor Pro</h3>
-                    <span class="tagline">The Electronic Innovator</span>
+                <div class="card bg-dark">
+                    <h3>Traktor Pro</h3><span class="tagline">The Electronic Innovator</span>
                     <p>Perfect for techno and house DJs who love live looping and deep layering.</p>
                 </div>
-                <div class="card">
-                    <h3>Engine DJ</h3>
-                    <span class="tagline">The Standalone Future</span>
+                <div class="card bg-dark">
+                    <h3>Engine DJ</h3><span class="tagline">The Standalone Future</span>
                     <p>Powerful OS for laptop-free hardware. The brain inside Denon and Numark gear.</p>
                 </div>
             </div>
         </section>
 
-        <section id="gear" class="content-section" style="margin-top: 3rem;">
-            <h2 class="section-title">The Brawn: Understand The Hardware</h2>
-            <p class="section-desc">From bedroom controllers to club-standard booths. Select a category to see the best gear.</p>
+        <section data-category="hardware">
+            <h2>The Brawn: Understand The Hardware</h2>
+            <p>From bedroom controllers to club-standard booths.</p>
             <div class="grid">
-                <div class="card">
-                    <img src="controller.png" alt="DJ Controller" class="hardware-img" onerror="this.style.display='none'">
+                <div class="card bg-light">
                     <h3>DJ Controllers</h3>
                     <p>All-in-one units that plug into your laptop. The best starting point for every DJ.</p>
                     <a href="controllers.html" class="btn">View Controllers</a>
                 </div>
-                <div class="card">
-                    <img src="standalone.png" alt="Standalone System" class="hardware-img" onerror="this.style.display='none'">
+                <div class="card bg-light">
                     <h3>Standalone Systems</h3>
                     <p>No laptop required. Play directly from a USB with built-in screens and software.</p>
                     <a href="standalones.html" class="btn">View Standalones</a>
                 </div>
-                <div class="card">
-                    <img src="mixer.png" alt="DJ Mixer" class="hardware-img" onerror="this.style.display='none'">
+                <div class="card bg-light">
                     <h3>DJ Mixers</h3>
                     <p>The heart of the booth. Essential for modular setups using CDJs or Turntables.</p>
                     <a href="mixers.html" class="btn">View Mixers</a>
                 </div>
-                <div class="card">
-                    <img src="turntable.png" alt="DJ Turntable" class="hardware-img" onerror="this.style.display='none'">
+                <div class="card bg-light">
                     <h3>DJ Turntables</h3>
                     <p>The foundation of DJ culture. For vinyl purists and modern DVS scratch artists.</p>
                     <a href="turntables.html" class="btn">View Turntables</a>
@@ -134,33 +103,32 @@
             </div>
         </section>
 
-        <section id="audio" class="content-section" style="margin-top: 3rem;">
-            <h2 class="section-title">The Sound: Audio & Monitoring</h2>
-            <p class="section-desc">Deliver crystal clear sound to the crowd and perfect monitoring to the booth.</p>
+        <section data-category="sound">
+            <h2>The Sound: Audio & Monitoring</h2>
+            <p>Deliver crystal clear sound to the crowd and perfect monitoring to the booth.</p>
             <div class="grid">
-                <div class="card">
+                <div class="card bg-light">
                     <h3>DJ & Studio Speakers</h3>
                     <p>From accurate desktop studio monitors to earth-shaking PA systems and subwoofers.</p>
                     <a href="speakers.html" class="btn">View Speakers</a>
                 </div>
-                <div class="card">
+                <div class="card bg-light">
                     <h3>DJ Headphones</h3>
                     <p>The industry standards for professional monitoring, split-cueing, and beatmatching.</p>
                     <a href="headphones.html" class="btn">View Headphones</a>
                 </div>
             </div>
         </section>
+
     </div>
 
     <script>
-        // Home Page Smart Filter Logic
-        function filterHome(category, activeBtn) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        function filterSelection(category, activeBtn) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
             activeBtn.classList.add('active');
             
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(sec => {
-                if (category === 'all' || sec.id === category) {
+            document.querySelectorAll('section').forEach(sec => {
+                if (category === 'all' || sec.dataset.category === category) {
                     sec.style.display = 'block';
                 } else {
                     sec.style.display = 'none';
