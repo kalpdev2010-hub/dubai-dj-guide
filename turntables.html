@@ -17,8 +17,10 @@
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--text-light); line-height: 1.6; }
         header { text-align: center; padding: 1.5rem 2rem; background: linear-gradient(135deg, #000000, #2a2a2a); border-bottom: 3px solid var(--primary); }
         
-        .btn-home { display: inline-block; margin-top: 15px; padding: 10px 25px; background-color: var(--gray); color: var(--text-light); text-decoration: none; font-weight: bold; border-radius: 50px; border: 1px solid #444; transition: all 0.2s ease; }
-        .btn-home:hover { background-color: var(--primary); color: var(--text-dark); border-color: var(--primary); }
+        .quick-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 1.5rem; }
+        .nav-pill { padding: 8px 20px; background-color: var(--gray); color: var(--text-light); text-decoration: none; font-weight: bold; border-radius: 50px; font-size: 0.85rem; border: 1px solid #444; transition: all 0.2s ease; }
+        .nav-pill:hover { background-color: #444; }
+        .nav-pill.active { background-color: var(--primary); color: var(--text-dark); border-color: var(--primary); }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 3rem; }
@@ -42,7 +44,13 @@
     <header>
         <h1>DJ Turntables</h1>
         <p>The soul of mixing.</p>
-        <a href="index.html" class="btn-home">← Home Page</a>
+        <div class="quick-nav">
+            <a href="index.html" class="nav-pill">Home</a>
+            <a href="controllers.html" class="nav-pill">Controllers</a>
+            <a href="standalones.html" class="nav-pill">Standalones</a>
+            <a href="mixers.html" class="nav-pill">Mixers</a>
+            <a href="turntables.html" class="nav-pill active">Turntables</a>
+        </div>
     </header>
     <div class="container">
         <section><h2>1. Home Preference</h2><div class="grid">
