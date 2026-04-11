@@ -1,0 +1,87 @@
+[
+  {
+    "categoryId": "controllers",
+    "pageTitle": "Best DJ Controllers",
+    "tiers": [
+      {
+        "tierName": "Flagship 4-Channel Controllers",
+        "items": [
+          {
+            "brand": "Pioneer DJ",
+            "model": "DDJ-FLX10",
+            "badge": "CLUB STANDARD",
+            "description": "The ultimate 4-channel controller featuring advanced track separation (stems) for live mashups. Built for both Rekordbox and Serato.",
+            "searchQuery": "Pioneer DDJ-FLX10 controller"
+          },
+          {
+            "brand": "RANE",
+            "model": "FOUR",
+            "badge": "PREMIUM CHOICE",
+            "description": "Built like a tank with dedicated STEM controls and incredibly high-quality MAG FOUR faders. The king of Serato controllers.",
+            "searchQuery": "Rane Four DJ controller"
+          }
+        ]
+      },
+      {
+        "tierName": "Beginner & 2-Channel",
+        "items": [
+          {
+            "brand": "Pioneer DJ",
+            "model": "DDJ-FLX4",
+            "badge": "BEST FOR BEGINNERS",
+            "description": "The perfect entry point into the Pioneer ecosystem. Replaces the legendary DDJ-400 with a clean layout and Smart Fader features.",
+            "searchQuery": "Pioneer DDJ-FLX4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "categoryId": "mixers",
+    "pageTitle": "Pro DJ Mixers",
+    "tiers": [
+      {
+        "tierName": "Club Standard 4-Channel Mixers",
+        "items": [
+          {
+            "brand": "Pioneer DJ",
+            "model": "DJM-A9",
+            "badge": "2026 TOP PICK",
+            "description": "The new industry standard club mixer. Massive upgrades to the channel faders, dual USB-C ports, and phenomenal Sound Color FX.",
+            "searchQuery": "Pioneer DJM-A9 mixer"
+          }
+        ]
+      },
+      {
+        "tierName": "Battle & Scratch Mixers",
+        "items": [
+          {
+            "brand": "Pioneer DJ",
+            "model": "DJM-S11",
+            "badge": "SCRATCH KING",
+            "description": "The ultimate 2-channel battle mixer with a customizable touch screen and 22 built-in effects.",
+            "searchQuery": "Pioneer DJM-S11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "categoryId": "turntables",
+    "pageTitle": "Best DJ Turntables",
+    "tiers": [
+      {
+        "tierName": "Direct Drive Turntables",
+        "items": [
+          {
+            "brand": "Technics",
+            "model": "SL-1200MK7",
+            "badge": "THE LEGEND",
+            "description": "The undisputed king of DJ turntables. The MK7 brings a coreless direct drive motor to prevent cogging, alongside reverse play features.",
+            "searchQuery": "Technics SL-1200MK7"
+          }
+        ]
+      }
+    ]
+  }
+]
