@@ -66,19 +66,71 @@
       }
     ]
   },
-  {
+ {
     "categoryId": "turntables",
     "pageTitle": "Best DJ Turntables",
     "tiers": [
       {
-        "tierName": "Direct Drive Turntables",
+        "tierName": "1. Home Preference",
+        "items": [
+          {
+            "brand": "Pioneer DJ",
+            "model": "PLX-500",
+            "badge": "HOME LISTENING",
+            "description": "Great for home listening and digitizing your vinyl collection.",
+            "searchQuery": "Pioneer DJ PLX-500 turntable"
+          },
+          {
+            "brand": "Reloop",
+            "model": "RP-4000MK2",
+            "badge": "ASPIRING PROS",
+            "description": "High-torque direct drive motor perfect for aspiring pros.",
+            "searchQuery": "Reloop RP-4000MK2 turntable"
+          }
+        ]
+      },
+      {
+        "tierName": "2. Club Preference",
+        "items": [
+          {
+            "brand": "Pioneer DJ",
+            "model": "PLX-1000",
+            "badge": "CLUB STANDARD",
+            "description": "High-torque club standard built for the professional booth.",
+            "searchQuery": "Pioneer DJ PLX-1000 turntable"
+          },
+          {
+            "brand": "Reloop",
+            "model": "RP-7000MK2",
+            "badge": "ROAD READY",
+            "description": "Road-ready torque and precise high-resolution pitch control.",
+            "searchQuery": "Reloop RP-7000MK2 turntable"
+          },
+          {
+            "brand": "Reloop",
+            "model": "RP-8000MK2",
+            "badge": "HYBRID MIDI",
+            "description": "Advanced hybrid turntable with integrated MIDI performance pads.",
+            "searchQuery": "Reloop RP-8000MK2 turntable"
+          }
+        ]
+      },
+      {
+        "tierName": "3. Flagship King",
         "items": [
           {
             "brand": "Technics",
-            "model": "SL-1200MK7",
+            "model": "SL-1210MK7",
             "badge": "THE LEGEND",
-            "description": "The undisputed king of DJ turntables. The MK7 brings a coreless direct drive motor to prevent cogging, alongside reverse play features.",
-            "searchQuery": "Technics SL-1200MK7"
+            "description": "The undisputed global turntable legend. The MK7 brings a coreless direct drive motor to prevent cogging.",
+            "searchQuery": "Technics SL-1210MK7"
+          },
+          {
+            "brand": "Pioneer DJ",
+            "model": "PLX-CRSS12",
+            "badge": "THE FUTURE",
+            "description": "The hybrid future of analog and DVS. Control digital tracks without the needle ever skipping.",
+            "searchQuery": "Pioneer DJ PLX-CRSS12"
           }
         ]
       }
