@@ -52,23 +52,10 @@
         </div>
     </header>
     <div class="container">
-        <div class="grid">
-            <div class="card"><h3>CDJ3000X</h3><span class="brand">Alpha Theta</span><p>Next-generation flagship media player with advanced performance features.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>CDJ3000</h3><span class="brand">Pioneer DJ</span><p>The undisputed global club standard multi player.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>SC6000PRIME</h3><span class="brand">Denon DJ</span><p>Powerful ultimate mainstage media player with dual-layer playback.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>SC6000MPRIME</h3><span class="brand">Denon DJ</span><p>Flagship media player featuring a motorized platter for a true vinyl feel.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div>
+       <div id="gear-container" data-category="cdj"></div>
     </div>
     
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll('.card').forEach(card => {
-                const name = card.querySelector('h3').innerText;
-                const brand = card.querySelector('.brand').innerText;
-                card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
-            });
-        });
-    </script>
+    <script src="dj_app.js"></script>
     <style>
         .network-footer { 
             background: rgba(0, 0, 0, 0.2); /* Chameleon effect: adapts to any page color */
