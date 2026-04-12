@@ -52,29 +52,10 @@
         </div>
     </header>
     <div class="container">
-        <div class="grid">
-            <div class="card"><h3>TMA-2DJ</h3><span class="brand">AIAIAI</span><p>Modular professional DJ headphones with punchy and intense sound.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>HD25PLUS</h3><span class="brand">Sennheiser</span><p>The legendary DJ standard with extra cables and velour ear pads.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>HD25</h3><span class="brand">Sennheiser</span><p>The undisputed industry standard for lightweight, split-headband booth monitoring.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>HDJ-CX</h3><span class="brand">Pioneer DJ</span><p>Super lightweight professional on-ear DJ headphones designed for comfort.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>HDJ-X7</h3><span class="brand">Pioneer DJ</span><p>Professional over-ear headphones built to withstand the toughest touring booths.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>RHP-15</h3><span class="brand">Reloop</span><p>Sturdy, closed-back DJ headphones with deep and powerful sound characteristics.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>HF-175</h3><span class="brand">Numark</span><p>High-quality monitoring with plush earcups for long mixing sessions.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>HF-125</h3><span class="brand">Numark</span><p>Reliable, entry-level mixing headphones perfect for beginners.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>HFJ700</h3><span class="brand">Eikon</span><p>Professional closed-back headphones specifically tailored for accurate DJ monitoring.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>M-10</h3><span class="brand">V-Moda</span><p>Premium metal build quality with signature immersive, bass-forward sound.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div>
+        <div id="gear-container" data-category="headphones"></div>
     </div>
     
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll('.card').forEach(card => {
-                const name = card.querySelector('h3').innerText;
-                const brand = card.querySelector('.brand').innerText;
-                card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
-            });
-        });
-    </script>
+   <script src="dj_app.js"></script>
     <style>
         .network-footer { 
             background: rgba(0, 0, 0, 0.2); /* Chameleon effect: adapts to any page color */
