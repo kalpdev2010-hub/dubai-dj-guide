@@ -57,56 +57,9 @@
         </div>
     </header>
     <div class="container">
-        <section><h2>1. Battle Layout</h2><div class="grid">
-            <div class="card"><h3>DJM-S5</h3><span class="brand">Pioneer DJ</span><p>Entry scratch mixer with pro fader.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DJM-S7</h3><span class="brand">Pioneer DJ</span><p>Pro scratch power with performance pads.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DJM-S11</h3><span class="brand">Pioneer DJ</span><p>The championship standard battle mixer.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>ELITE</h3><span class="brand">Reloop</span><p>DVS ready with dual USB ports.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
-        <section><h2>2. Club Layout</h2><div class="grid">
-            <div class="card"><h3>DJM-750MK2</h3><span class="brand">Pioneer DJ</span><p>Club layout for your home setup.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>RMX-95</h3><span class="brand">Reloop</span><p>Pro 4-channel hub with stems control.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DJM-V5</h3><span class="brand">Alpha Theta</span><p>Next-gen 3-channel club precision.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
-        <section><h2>3. Flagship</h2><div class="grid">
-            <div class="card"><h3>DJM-V10LF</h3><span class="brand">Pioneer DJ</span><p>6-channel sonic powerhouse.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DJM-A9</h3><span class="brand">Pioneer DJ</span><p>The undisputed global club standard.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>EUPHONIA</h3><span class="brand">Alpha Theta</span><p>Premium rotary mixer for audiophiles.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
+       <div id="gear-container" data-category="mixers"></div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const container = document.querySelector('.container');
-            const sections = document.querySelectorAll('section');
-            const filterNav = document.createElement('div');
-            filterNav.className = 'filter-nav';
-            const allBtn = document.createElement('button');
-            allBtn.className = 'filter-btn active';
-            allBtn.innerText = 'All Gear';
-            allBtn.onclick = () => filterSelection('all', allBtn);
-            filterNav.appendChild(allBtn);
-            sections.forEach((sec, index) => {
-                const title = sec.querySelector('h2').innerText.replace(/^\d+\.\s*/, ''); 
-                sec.dataset.filter = 'tier-' + index; 
-                const btn = document.createElement('button');
-                btn.className = 'filter-btn';
-                btn.innerText = title;
-                btn.onclick = () => filterSelection('tier-' + index, btn);
-                filterNav.appendChild(btn);
-            });
-            container.insertBefore(filterNav, container.firstChild);
-            function filterSelection(filterId, activeBtn) {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                activeBtn.classList.add('active');
-                sections.forEach(sec => { sec.style.display = (filterId === 'all' || sec.dataset.filter === filterId) ? 'block' : 'none'; });
-            }
-        });
-        document.querySelectorAll('.card').forEach(card => {
-            const name = card.querySelector('h3').innerText;
-            const brand = card.querySelector('.brand').innerText;
-            card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
-        });
-    </script>
+    <script src="dj_app.js"></script>
     <style>
         .network-footer { 
             background: rgba(0, 0, 0, 0.2); /* Chameleon effect: adapts to any page color */
