@@ -1,37 +1,28 @@
 [
   {
-    "categoryId": "controllers",
-    "pageTitle": "Best DJ Controllers",
+    "categoryId": "turntables",
+    "pageTitle": "Best DJ Turntables",
     "tiers": [
       {
-        "tierName": "Flagship 4-Channel Controllers",
+        "tierName": "1. Home Preference",
         "items": [
-          {
-            "brand": "Pioneer DJ",
-            "model": "DDJ-FLX10",
-            "badge": "CLUB STANDARD",
-            "description": "The ultimate 4-channel controller featuring advanced track separation (stems) for live mashups. Built for both Rekordbox and Serato.",
-            "searchQuery": "Pioneer DDJ-FLX10 controller"
-          },
-          {
-            "brand": "RANE",
-            "model": "FOUR",
-            "badge": "PREMIUM CHOICE",
-            "description": "Built like a tank with dedicated STEM controls and incredibly high-quality MAG FOUR faders. The king of Serato controllers.",
-            "searchQuery": "Rane Four DJ controller"
-          }
+          { "brand": "Pioneer DJ", "model": "PLX-500", "badge": "HOME LISTENING", "description": "Great for home listening and digitizing your vinyl collection.", "searchQuery": "Pioneer DJ PLX-500 turntable" },
+          { "brand": "Reloop", "model": "RP-4000MK2", "badge": "ASPIRING PROS", "description": "High-torque direct drive motor perfect for aspiring pros.", "searchQuery": "Reloop RP-4000MK2 turntable" }
         ]
       },
       {
-        "tierName": "Beginner & 2-Channel",
+        "tierName": "2. Club Preference",
         "items": [
-          {
-            "brand": "Pioneer DJ",
-            "model": "DDJ-FLX4",
-            "badge": "BEST FOR BEGINNERS",
-            "description": "The perfect entry point into the Pioneer ecosystem. Replaces the legendary DDJ-400 with a clean layout and Smart Fader features.",
-            "searchQuery": "Pioneer DDJ-FLX4"
-          }
+          { "brand": "Pioneer DJ", "model": "PLX-1000", "badge": "CLUB STANDARD", "description": "High-torque club standard built for the professional booth.", "searchQuery": "Pioneer DJ PLX-1000 turntable" },
+          { "brand": "Reloop", "model": "RP-7000MK2", "badge": "ROAD READY", "description": "Road-ready torque and precise high-resolution pitch control.", "searchQuery": "Reloop RP-7000MK2 turntable" },
+          { "brand": "Reloop", "model": "RP-8000MK2", "badge": "HYBRID MIDI", "description": "Advanced hybrid turntable with integrated MIDI performance pads.", "searchQuery": "Reloop RP-8000MK2 turntable" }
+        ]
+      },
+      {
+        "tierName": "3. Flagship King",
+        "items": [
+          { "brand": "Technics", "model": "SL-1210MK7", "badge": "THE LEGEND", "description": "The undisputed global turntable legend. The MK7 brings a coreless direct drive motor to prevent cogging.", "searchQuery": "Technics SL-1210MK7" },
+          { "brand": "Pioneer DJ", "model": "PLX-CRSS12", "badge": "THE FUTURE", "description": "The hybrid future of analog and DVS. Control digital tracks without the needle ever skipping.", "searchQuery": "Pioneer DJ PLX-CRSS12" }
         ]
       }
     ]
@@ -41,97 +32,178 @@
     "pageTitle": "Pro DJ Mixers",
     "tiers": [
       {
-        "tierName": "Club Standard 4-Channel Mixers",
+        "tierName": "1. Battle Layout",
         "items": [
-          {
-            "brand": "Pioneer DJ",
-            "model": "DJM-A9",
-            "badge": "2026 TOP PICK",
-            "description": "The new industry standard club mixer. Massive upgrades to the channel faders, dual USB-C ports, and phenomenal Sound Color FX.",
-            "searchQuery": "Pioneer DJM-A9 mixer"
-          }
+          { "brand": "Pioneer DJ", "model": "DJM-S5", "badge": "ENTRY SCRATCH", "description": "Entry scratch mixer with pro fader.", "searchQuery": "Pioneer DJM-S5" },
+          { "brand": "Pioneer DJ", "model": "DJM-S7", "badge": "PRO SCRATCH", "description": "Pro scratch power with performance pads.", "searchQuery": "Pioneer DJM-S7" },
+          { "brand": "Pioneer DJ", "model": "DJM-S11", "badge": "CHAMPIONSHIP", "description": "The championship standard battle mixer.", "searchQuery": "Pioneer DJM-S11" },
+          { "brand": "Reloop", "model": "ELITE", "badge": "DVS READY", "description": "DVS ready with dual USB ports.", "searchQuery": "Reloop ELITE mixer" }
         ]
       },
       {
-        "tierName": "Battle & Scratch Mixers",
+        "tierName": "2. Club Layout",
         "items": [
-          {
-            "brand": "Pioneer DJ",
-            "model": "DJM-S11",
-            "badge": "SCRATCH KING",
-            "description": "The ultimate 2-channel battle mixer with a customizable touch screen and 22 built-in effects.",
-            "searchQuery": "Pioneer DJM-S11"
-          }
+          { "brand": "Pioneer DJ", "model": "DJM-750MK2", "badge": "HOME CLUB", "description": "Club layout for your home setup.", "searchQuery": "Pioneer DJM-750MK2" },
+          { "brand": "Reloop", "model": "RMX-95", "badge": "PRO HUB", "description": "Pro 4-channel hub with stems control.", "searchQuery": "Reloop RMX-95" },
+          { "brand": "Alpha Theta", "model": "DJM-V5", "badge": "NEXT GEN", "description": "Next-gen 3-channel club precision.", "searchQuery": "Alpha Theta DJM-V5" }
+        ]
+      },
+      {
+        "tierName": "3. Flagship",
+        "items": [
+          { "brand": "Pioneer DJ", "model": "DJM-V10LF", "badge": "6-CHANNEL", "description": "6-channel sonic powerhouse.", "searchQuery": "Pioneer DJM-V10LF" },
+          { "brand": "Pioneer DJ", "model": "DJM-A9", "badge": "CLUB STANDARD", "description": "The undisputed global club standard.", "searchQuery": "Pioneer DJM-A9" },
+          { "brand": "Alpha Theta", "model": "EUPHONIA", "badge": "ROTARY KING", "description": "Premium rotary mixer for audiophiles.", "searchQuery": "Alpha Theta EUPHONIA" }
         ]
       }
     ]
   },
- {
-    "categoryId": "turntables",
-    "pageTitle": "Best DJ Turntables",
+  {
+    "categoryId": "controllers",
+    "pageTitle": "Best DJ Controllers",
     "tiers": [
       {
-        "tierName": "1. Home Preference",
+        "tierName": "1. Kids Zone",
         "items": [
-          {
-            "brand": "Pioneer DJ",
-            "model": "PLX-500",
-            "badge": "HOME LISTENING",
-            "description": "Great for home listening and digitizing your vinyl collection.",
-            "searchQuery": "Pioneer DJ PLX-500 turntable"
-          },
-          {
-            "brand": "Reloop",
-            "model": "RP-4000MK2",
-            "badge": "ASPIRING PROS",
-            "description": "High-torque direct drive motor perfect for aspiring pros.",
-            "searchQuery": "Reloop RP-4000MK2 turntable"
-          }
+          { "brand": "Alpha Theta", "model": "DDJ-FLX2", "badge": "FUN ENTRY", "description": "Compact and fun entry for young DJs.", "searchQuery": "Alpha Theta DDJ-FLX2" },
+          { "brand": "Numark", "model": "PARTYMIXLIVE", "badge": "BUILT-IN SPEAKERS", "description": "Built-in light show and speakers.", "searchQuery": "Numark PARTYMIXLIVE" },
+          { "brand": "Reloop", "model": "BUDDY", "badge": "TABLET MIXING", "description": "Great for mobile and tablet mixing.", "searchQuery": "Reloop BUDDY" },
+          { "brand": "Hercules", "model": "DJ STARTER KIT", "badge": "BUNDLE", "description": "Complete unbox-and-play bundle.", "searchQuery": "Hercules DJ STARTER KIT" }
         ]
       },
       {
-        "tierName": "2. Club Preference",
+        "tierName": "2. Beginner",
         "items": [
-          {
-            "brand": "Pioneer DJ",
-            "model": "PLX-1000",
-            "badge": "CLUB STANDARD",
-            "description": "High-torque club standard built for the professional booth.",
-            "searchQuery": "Pioneer DJ PLX-1000 turntable"
-          },
-          {
-            "brand": "Reloop",
-            "model": "RP-7000MK2",
-            "badge": "ROAD READY",
-            "description": "Road-ready torque and precise high-resolution pitch control.",
-            "searchQuery": "Reloop RP-7000MK2 turntable"
-          },
-          {
-            "brand": "Reloop",
-            "model": "RP-8000MK2",
-            "badge": "HYBRID MIDI",
-            "description": "Advanced hybrid turntable with integrated MIDI performance pads.",
-            "searchQuery": "Reloop RP-8000MK2 turntable"
-          }
+          { "brand": "Pioneer DJ", "model": "DDJ-FLX4", "badge": "INDUSTRY STANDARD", "description": "The industry standard for learning.", "searchQuery": "Pioneer DDJ-FLX4" },
+          { "brand": "Pioneer DJ", "model": "DDJ-REV1", "badge": "BATTLE STYLE", "description": "Battle-style layout for scratch DJs.", "searchQuery": "Pioneer DDJ-REV1" },
+          { "brand": "Numark", "model": "MIXTRACKPROFX", "badge": "PRO FEATURES", "description": "Pro features in a simple frame.", "searchQuery": "Numark MIXTRACKPROFX" },
+          { "brand": "Numark", "model": "MIXTRACKPLATINUMFX", "badge": "BUILT-IN DISPLAYS", "description": "Displays built into the wheels.", "searchQuery": "Numark MIXTRACKPLATINUMFX" }
         ]
       },
       {
-        "tierName": "3. Flagship King",
+        "tierName": "3. Mid-Range",
         "items": [
-          {
-            "brand": "Technics",
-            "model": "SL-1210MK7",
-            "badge": "THE LEGEND",
-            "description": "The undisputed global turntable legend. The MK7 brings a coreless direct drive motor to prevent cogging.",
-            "searchQuery": "Technics SL-1210MK7"
-          },
-          {
-            "brand": "Pioneer DJ",
-            "model": "PLX-CRSS12",
-            "badge": "THE FUTURE",
-            "description": "The hybrid future of analog and DVS. Control digital tracks without the needle ever skipping.",
-            "searchQuery": "Pioneer DJ PLX-CRSS12"
-          }
+          { "brand": "Alpha Theta", "model": "DDJ-GRV6", "badge": "GROOVE CONTROL", "description": "Next-gen groove and remix control.", "searchQuery": "Alpha Theta DDJ-GRV6" },
+          { "brand": "Pioneer DJ", "model": "DDJ-REV5", "badge": "LARGE PLATTERS", "description": "Large platters and stems control.", "searchQuery": "Pioneer DDJ-REV5" },
+          { "brand": "Numark", "model": "NS4FX", "badge": "WORKHORSE", "description": "4-channel mobile DJ workhorse.", "searchQuery": "Numark NS4FX" },
+          { "brand": "Reloop", "model": "MIXON 8 PRO", "badge": "MULTI-PLATFORM", "description": "Multi-platform pro controller.", "searchQuery": "Reloop MIXON 8 PRO" }
+        ]
+      },
+      {
+        "tierName": "4. Flagship",
+        "items": [
+          { "brand": "Pioneer DJ", "model": "DDJ-FLX10", "badge": "CLUB RIG", "description": "The ultimate club-standard rig.", "searchQuery": "Pioneer DDJ-FLX10" },
+          { "brand": "Rane", "model": "One", "badge": "MOTORIZED", "description": "Motorized platters for vinyl feel.", "searchQuery": "Rane One controller" },
+          { "brand": "Rane", "model": "FOUR", "badge": "STEMS KING", "description": "Unmatched stems and audio quality.", "searchQuery": "Rane FOUR controller" },
+          { "brand": "Rane", "model": "PERFORMER", "badge": "4-CHANNEL POWER", "description": "Flagship motorized 4-channel power.", "searchQuery": "Rane PERFORMER" }
+        ]
+      }
+    ]
+  },
+  {
+    "categoryId": "standalones",
+    "pageTitle": "Standalone Systems",
+    "tiers": [
+      {
+        "tierName": "1. Beginner",
+        "items": [
+          { "brand": "Pioneer DJ", "model": "XDJ-RR", "badge": "CLUB LAYOUT", "description": "Standard club layout in a 2-channel rig.", "searchQuery": "Pioneer XDJ-RR" },
+          { "brand": "Numark", "model": "MIXSTREAMPRO+", "badge": "STREAMING", "description": "Built-in speakers and streaming.", "searchQuery": "Numark MIXSTREAMPRO+" },
+          { "brand": "Numark", "model": "MIXSTREAMPROGO", "badge": "BATTERY POWERED", "description": "Battery-powered for total freedom.", "searchQuery": "Numark MIXSTREAMPROGO" }
+        ]
+      },
+      {
+        "tierName": "2. Mid-Range",
+        "items": [
+          { "brand": "Pioneer DJ", "model": "XDJ-RX3", "badge": "PRO 2-CHANNEL", "description": "Pro 2-channel system with huge screen.", "searchQuery": "Pioneer XDJ-RX3" },
+          { "brand": "Denon DJ", "model": "SCLIVE4", "badge": "AMAZON MUSIC", "description": "4-channel power with Amazon Music.", "searchQuery": "Denon DJ SCLIVE4" },
+          { "brand": "Denon DJ", "model": "PRIMEGO+", "badge": "PORTABLE", "description": "Pro features in a portable size.", "searchQuery": "Denon DJ PRIMEGO+" }
+        ]
+      },
+      {
+        "tierName": "3. Flagship",
+        "items": [
+          { "brand": "Alpha Theta", "model": "XDJ-AZ", "badge": "CLUB CENTERPIECE", "description": "The ultimate club-ready centerpiece.", "searchQuery": "Alpha Theta XDJ-AZ" },
+          { "brand": "Denon DJ", "model": "PRIME4+", "badge": "MOST POWERFUL", "description": "The world's most powerful 4-channel system.", "searchQuery": "Denon DJ PRIME4+" },
+          { "brand": "Rane", "model": "SYSTEMONE", "badge": "MOTORIZED", "description": "Motorized platters meet standalone freedom.", "searchQuery": "Rane SYSTEMONE" }
+        ]
+      }
+    ]
+  },
+  {
+    "categoryId": "cdj",
+    "pageTitle": "CDJs & Media Players",
+    "tiers": [
+      {
+        "tierName": "1. Club Standard",
+        "items": [
+          { "brand": "Alpha Theta", "model": "CDJ3000X", "badge": "NEXT GEN", "description": "Next-generation flagship media player with advanced performance features.", "searchQuery": "Alpha Theta CDJ3000X" },
+          { "brand": "Pioneer DJ", "model": "CDJ3000", "badge": "GLOBAL STANDARD", "description": "The undisputed global club standard multi player.", "searchQuery": "Pioneer CDJ3000" },
+          { "brand": "Denon DJ", "model": "SC6000PRIME", "badge": "DUAL LAYER", "description": "Powerful ultimate mainstage media player with dual-layer playback.", "searchQuery": "Denon DJ SC6000PRIME" },
+          { "brand": "Denon DJ", "model": "SC6000MPRIME", "badge": "MOTORIZED PLATTER", "description": "Flagship media player featuring a motorized platter for a true vinyl feel.", "searchQuery": "Denon DJ SC6000MPRIME" }
+        ]
+      }
+    ]
+  },
+  {
+    "categoryId": "headphones",
+    "pageTitle": "DJ Headphones",
+    "tiers": [
+      {
+        "tierName": "1. Professional Monitoring",
+        "items": [
+          { "brand": "AIAIAI", "model": "TMA-2DJ", "badge": "MODULAR", "description": "Modular professional DJ headphones with punchy and intense sound.", "searchQuery": "AIAIAI TMA-2DJ" },
+          { "brand": "Sennheiser", "model": "HD25PLUS", "badge": "LEGENDARY", "description": "The legendary DJ standard with extra cables and velour ear pads.", "searchQuery": "Sennheiser HD25PLUS" },
+          { "brand": "Sennheiser", "model": "HD25", "badge": "INDUSTRY STANDARD", "description": "The undisputed industry standard for lightweight, split-headband booth monitoring.", "searchQuery": "Sennheiser HD25" },
+          { "brand": "Pioneer DJ", "model": "HDJ-CX", "badge": "ULTRA LIGHT", "description": "Super lightweight professional on-ear DJ headphones designed for comfort.", "searchQuery": "Pioneer HDJ-CX" },
+          { "brand": "Pioneer DJ", "model": "HDJ-X7", "badge": "TOURING BUILT", "description": "Professional over-ear headphones built to withstand the toughest touring booths.", "searchQuery": "Pioneer HDJ-X7" },
+          { "brand": "Reloop", "model": "RHP-15", "badge": "POWERFUL BASS", "description": "Sturdy, closed-back DJ headphones with deep and powerful sound characteristics.", "searchQuery": "Reloop RHP-15" },
+          { "brand": "Numark", "model": "HF-175", "badge": "PLUSH COMFORT", "description": "High-quality monitoring with plush earcups for long mixing sessions.", "searchQuery": "Numark HF-175" },
+          { "brand": "Numark", "model": "HF-125", "badge": "ENTRY LEVEL", "description": "Reliable, entry-level mixing headphones perfect for beginners.", "searchQuery": "Numark HF-125" },
+          { "brand": "Eikon", "model": "HFJ700", "badge": "ACCURATE", "description": "Professional closed-back headphones specifically tailored for accurate DJ monitoring.", "searchQuery": "Eikon HFJ700" },
+          { "brand": "V-Moda", "model": "M-10", "badge": "PREMIUM METAL", "description": "Premium metal build quality with signature immersive, bass-forward sound.", "searchQuery": "V-Moda M-10" }
+        ]
+      }
+    ]
+  },
+  {
+    "categoryId": "speakers",
+    "pageTitle": "DJ & Studio Speakers",
+    "tiers": [
+      {
+        "tierName": "1. Desktop Pairs",
+        "items": [
+          { "brand": "Pioneer DJ", "model": "DM-40D-BT", "badge": "BLUETOOTH", "description": "Compact desktop monitors with Bluetooth and clear bass punch.", "searchQuery": "Pioneer DM-40D-BT" },
+          { "brand": "Presonus", "model": "ERIS 4.5BT GEN2", "badge": "STUDIO RESPONSE", "description": "Accurate studio response with convenient wireless connectivity.", "searchQuery": "Presonus ERIS 4.5BT" },
+          { "brand": "Mackie", "model": "CR4-XBT", "badge": "SLEEK DESIGN", "description": "Signature Mackie studio sound in a sleek desktop form factor.", "searchQuery": "Mackie CR4-XBT" },
+          { "brand": "Reloop", "model": "DSM-3BT", "badge": "SMART MONITOR", "description": "Smart desktop monitor system designed for DJs and producers.", "searchQuery": "Reloop DSM-3BT" }
+        ]
+      },
+      {
+        "tierName": "2. Portables",
+        "items": [
+          { "brand": "Proel", "model": "FREONEX", "badge": "BATTERY FREEDOM", "description": "High-performance portable sound with battery-powered freedom.", "searchQuery": "Proel FREONEX" },
+          { "brand": "Bose", "model": "S1PRO+", "badge": "PREMIUM PA", "description": "Premium ultra-portable PA system with unmatched clarity and wireless ease.", "searchQuery": "Bose S1PRO+" },
+          { "brand": "Bose", "model": "L1PRO8", "badge": "LINE ARRAY", "description": "Portable line array system delivering 180-degree horizontal sound coverage.", "searchQuery": "Bose L1PRO8" },
+          { "brand": "Alpha Theta", "model": "WAVE-EIGHT", "badge": "LOW LATENCY", "description": "Sonic-power portable DJ speaker with ultra-low latency wireless tech.", "searchQuery": "Alpha Theta WAVE-EIGHT" }
+        ]
+      },
+      {
+        "tierName": "3. PA",
+        "items": [
+          { "brand": "Proel", "model": "DIVA12A", "badge": "DIGITAL PROCESSING", "description": "High-efficiency active loudspeaker packed with digital processing.", "searchQuery": "Proel DIVA12A" },
+          { "brand": "Presonus", "model": "AIR 12", "badge": "RICH LOW END", "description": "Lightweight active loudspeaker offering a rich, extended low end.", "searchQuery": "Presonus AIR 12" },
+          { "brand": "Yamaha", "model": "DBR12", "badge": "RUGGED POWER", "description": "Powerful, rugged, and highly portable PA speaker with legendary Yamaha sound.", "searchQuery": "Yamaha DBR12" },
+          { "brand": "Mackie", "model": "THUMP212", "badge": "1400W THUMP", "description": "Proven Mackie thump with 1400W of class-leading performance.", "searchQuery": "Mackie THUMP212" }
+        ]
+      },
+      {
+        "tierName": "4. Subwoofer",
+        "items": [
+          { "brand": "Proel", "model": "DIVASUB18A", "badge": "CHEST-THUMPING", "description": "Chest-thumping 18-inch low-frequency extension for any PA setup.", "searchQuery": "Proel DIVASUB18A" },
+          { "brand": "Presonus", "model": "AIR18S", "badge": "VENUE READY", "description": "Powerful and clear low-end performance for serious venue sound.", "searchQuery": "Presonus AIR18S" },
+          { "brand": "Yamaha", "model": "DXS15MKII", "badge": "HIGH OUTPUT", "description": "High-output 15-inch powered subwoofer with band-pass design.", "searchQuery": "Yamaha DXS15MKII" },
+          { "brand": "Mackie", "model": "THUMP118S", "badge": "MAXIMUM BASS", "description": "Maximum bass delivery to complement the entire Thump series.", "searchQuery": "Mackie THUMP118S" }
         ]
       }
     ]
