@@ -6,6 +6,9 @@
     <title>Dubai DJ Equipment Guide | Controllers, Mixers & More</title>
     <meta name="description" content="The ultimate personal guide to DJ software and hardware. Compare top controllers, standalone systems, mixers, turntables, and CDJs in Dubai.">
     <style>
+        html {
+    scroll-behavior: smooth;
+}
         :root {
             --primary: #ffcc00; 
             --dark: #121212;
@@ -38,10 +41,81 @@
         
         .btn { display: inline-block; margin-top: auto; padding: 12px 25px; background-color: var(--primary); color: var(--button-text); text-decoration: none; font-weight: bold; border-radius: 50px; transition: all 0.2s ease; text-align: center; }
         .btn:hover { background-color: #e6b800; }
+        /* HERO OPENING SCENE */
+.hero-scene {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('dj-hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.5) 0%, rgba(18, 18, 18, 1) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-start {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #121212;
+    background-color: var(--primary);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-start:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
     </style>
 </head>
 <body>
-    <header>
+    <section class="hero-scene">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>THE DJ GEAR VAULT</h1>
+        <p>The Master Reference Guide for Professional Audio</p>
+        <a href="#start" class="btn-start">ENTER VAULT ▼</a>
+    </div>
+</section>
+    <header id="start">
         <h1>Dubai DJ Guide</h1>
         <p>The ultimate blueprint to understanding DJ software, building your perfect hardware setup, and pushing the right sound.</p>
     </header>
