@@ -57,75 +57,10 @@
         </div>
     </header>
     <div class="container">
-        <section><h2>1. Desktop Pairs</h2><div class="grid">
-            <div class="card"><h3>DM-40D-BT</h3><span class="brand">Pioneer DJ</span><p>Compact desktop monitors with Bluetooth and clear bass punch.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>ERIS 4.5BT GEN2</h3><span class="brand">Presonus</span><p>Accurate studio response with convenient wireless connectivity.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>CR4-XBT</h3><span class="brand">Mackie</span><p>Signature Mackie studio sound in a sleek desktop form factor.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DSM-3BT</h3><span class="brand">Reloop</span><p>Smart desktop monitor system designed for DJs and producers.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
-        
-        <section><h2>2. Portables</h2><div class="grid">
-            <div class="card"><h3>FREONEX</h3><span class="brand">Proel</span><p>High-performance portable sound with battery-powered freedom.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>S1PRO+</h3><span class="brand">Bose</span><p>Premium ultra-portable PA system with unmatched clarity and wireless ease.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>L1PRO8</h3><span class="brand">Bose</span><p>Portable line array system delivering 180-degree horizontal sound coverage.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>WAVE-EIGHT</h3><span class="brand">Alpha Theta</span><p>Sonic-power portable DJ speaker with ultra-low latency wireless tech.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
-        
-        <section><h2>3. PA</h2><div class="grid">
-            <div class="card"><h3>DIVA12A</h3><span class="brand">Proel</span><p>High-efficiency active loudspeaker packed with digital processing.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>AIR 12</h3><span class="brand">Presonus</span><p>Lightweight active loudspeaker offering a rich, extended low end.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DBR12</h3><span class="brand">Yamaha</span><p>Powerful, rugged, and highly portable PA speaker with legendary Yamaha sound.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>THUMP212</h3><span class="brand">Mackie</span><p>Proven Mackie thump with 1400W of class-leading performance.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
-        
-        <section><h2>4. Subwoofer</h2><div class="grid">
-            <div class="card"><h3>DIVASUB18A</h3><span class="brand">Proel</span><p>Chest-thumping 18-inch low-frequency extension for any PA setup.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>AIR18S</h3><span class="brand">Presonus</span><p>Powerful and clear low-end performance for serious venue sound.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DXS15MKII</h3><span class="brand">Yamaha</span><p>High-output 15-inch powered subwoofer with band-pass design.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>THUMP118S</h3><span class="brand">Mackie</span><p>Maximum bass delivery to complement the entire Thump series.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
+    <div id="gear-container" data-category="speakers"></div>    
     </div>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const container = document.querySelector('.container');
-            const sections = document.querySelectorAll('section');
-            const filterNav = document.createElement('div');
-            filterNav.className = 'filter-nav';
-            
-            const allBtn = document.createElement('button');
-            allBtn.className = 'filter-btn active';
-            allBtn.innerText = 'All Gear';
-            allBtn.onclick = () => filterSelection('all', allBtn);
-            filterNav.appendChild(allBtn);
-            
-            sections.forEach((sec, index) => {
-                const title = sec.querySelector('h2').innerText.replace(/^\d+\.\s*/, ''); 
-                sec.dataset.filter = 'tier-' + index; 
-                const btn = document.createElement('button');
-                btn.className = 'filter-btn';
-                btn.innerText = title;
-                btn.onclick = () => filterSelection('tier-' + index, btn);
-                filterNav.appendChild(btn);
-            });
-            container.insertBefore(filterNav, container.firstChild);
-            
-            function filterSelection(filterId, activeBtn) {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                activeBtn.classList.add('active');
-                sections.forEach(sec => {
-                    sec.style.display = (filterId === 'all' || sec.dataset.filter === filterId) ? 'block' : 'none';
-                });
-            }
-        });
-
-        document.querySelectorAll('.card').forEach(card => {
-            const name = card.querySelector('h3').innerText;
-            const brand = card.querySelector('.brand').innerText;
-            card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
-        });
-    </script>
-    <style>
+    <script src="dj_app.js"></script>
+        <style>
         .network-footer { 
             background: rgba(0, 0, 0, 0.2); /* Chameleon effect: adapts to any page color */
             padding: 3rem 1rem; 
