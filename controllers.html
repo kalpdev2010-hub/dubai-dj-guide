@@ -57,67 +57,9 @@
         </div>
     </header>
     <div class="container">
-        <section><h2>1. Kids Zone</h2><div class="grid">
-            <div class="card"><h3>DDJ-FLX2</h3><span class="brand">Alpha Theta</span><p>Compact and fun entry for young DJs.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>PARTYMIXLIVE</h3><span class="brand">Numark</span><p>Built-in light show and speakers.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>BUDDY</h3><span class="brand">Reloop</span><p>Great for mobile and tablet mixing.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DJ STARTER KIT</h3><span class="brand">Hercules</span><p>Complete unbox-and-play bundle.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
-        <section><h2>2. Beginner</h2><div class="grid">
-            <div class="card"><h3>DDJ-FLX4</h3><span class="brand">Pioneer DJ</span><p>The industry standard for learning.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DDJ-REV1</h3><span class="brand">Pioneer DJ</span><p>Battle-style layout for scratch DJs.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>MIXTRACKPROFX</h3><span class="brand">Numark</span><p>Pro features in a simple frame.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>MIXTRACKPLATINUMFX</h3><span class="brand">Numark</span><p>Displays built into the wheels.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
-        <section><h2>3. Mid-Range</h2><div class="grid">
-            <div class="card"><h3>DDJ-GRV6</h3><span class="brand">Alpha Theta</span><p>Next-gen groove and remix control.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>DDJ-REV5</h3><span class="brand">Pioneer DJ</span><p>Large platters and stems control.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>NS4FX</h3><span class="brand">Numark</span><p>4-channel mobile DJ workhorse.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>MIXON 8 PRO</h3><span class="brand">Reloop</span><p>Multi-platform pro controller.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
-        <section><h2>4. Flagship</h2><div class="grid">
-            <div class="card"><h3>DDJ-FLX10</h3><span class="brand">Pioneer DJ</span><p>The ultimate club-standard rig.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>One</h3><span class="brand">Rane</span><p>Motorized platters for vinyl feel.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>FOUR</h3><span class="brand">Rane</span><p>Unmatched stems and audio quality.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-            <div class="card"><h3>PERFORMER</h3><span class="brand">Rane</span><p>Flagship motorized 4-channel power.</p><a href="#" class="btn-amazon">Check In Amazon</a></div>
-        </div></section>
+    <div id="gear-container" data-category="controllers"></div>    
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const container = document.querySelector('.container');
-            const sections = document.querySelectorAll('section');
-            const filterNav = document.createElement('div');
-            filterNav.className = 'filter-nav';
-            
-            const allBtn = document.createElement('button');
-            allBtn.className = 'filter-btn active';
-            allBtn.innerText = 'All Gear';
-            allBtn.onclick = () => filterSelection('all', allBtn);
-            filterNav.appendChild(allBtn);
-            
-            sections.forEach((sec, index) => {
-                const title = sec.querySelector('h2').innerText.replace(/^\d+\.\s*/, ''); 
-                sec.dataset.filter = 'tier-' + index; 
-                const btn = document.createElement('button');
-                btn.className = 'filter-btn';
-                btn.innerText = title;
-                btn.onclick = () => filterSelection('tier-' + index, btn);
-                filterNav.appendChild(btn);
-            });
-            container.insertBefore(filterNav, container.firstChild);
-            
-            function filterSelection(filterId, activeBtn) {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                activeBtn.classList.add('active');
-                sections.forEach(sec => { sec.style.display = (filterId === 'all' || sec.dataset.filter === filterId) ? 'block' : 'none'; });
-            }
-        });
-        document.querySelectorAll('.card').forEach(card => {
-            const name = card.querySelector('h3').innerText;
-            const brand = card.querySelector('.brand').innerText;
-            card.querySelector('.btn-amazon').href = `https://www.amazon.ae/s?k=${encodeURIComponent(brand + ' ' + name)}&tag=dubaicinema-21`;
-        });
-    </script>
+   <script src="dj_app.js"></script>
     <style>
         .network-footer { 
             background: rgba(0, 0, 0, 0.2); /* Chameleon effect: adapts to any page color */
