@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro DJ & Studio Radar | Dubai DJ Guide</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a1a, #000000);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid #ffd700;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header p {
+            color: #aaaaaa;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .news-card {
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #ffd700;
+            transition: transform 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        .status-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #000;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .news-date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .news-title {
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+        .news-headline {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .news-desc {
+            color: #aaaaaa;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .filter-btn {
+            background: #1a1a1a;
+            color: #888;
+            border: 1px solid #333;
+            padding: 8px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .filter-btn:hover {
+            border-color: #ffd700;
+            color: #fff;
+        }
+        .filter-btn.active {
+            background: #ffd700;
+            color: #000;
+            border-color: #ffd700;
+        }
+        .network-footer {
+            background-color: #0a0a0a;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 4rem;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .network-footer h4 {
+            color: #ffffff;
+            margin-top: 0;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+        .network-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .network-links a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 10px 20px;
+            border: 1px solid #444;
+            border-radius: 50px;
+            transition: all 0.2s ease;
+            background-color: #1a1a1a;
+        }
+        .network-links a:hover {
+            color: #ffffff;
+            border-color: #00e5ff;
+            background-color: #2a2a2a;
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+        }
+
+        /* Mobile Tweak */
+        @media (max-width: 600px) {
+            .filter-btn {
+                padding: 6px 14px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; gap: 10px; padding: 20px 10px 0 10px; flex-wrap: wrap;">
+        <a href="index.html" style="background: #ffd700; color: #000; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.95em;">🎧 DJ Library</a>
+        <a href="guide.html" style="background: #ffd700; color: #000; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.95em;">🎚️ DJ 101</a>
+        <a href="hardware.html" style="background: #ffd700; color: #000; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 0.95em;">🛠️ Gear Guide</a>
+    </div>
+
+    <header>
+        <h1>Pro DJ & Studio Radar</h1>
+        <p>Global gear launches and studio updates for the Dubai music scene</p>
+    </header>
+
+    <div class="container">
+        <div class="brand-filter-wrapper" style="text-align: center; margin: 30px 0; padding: 0 15px;">
+            <h3 style="color: #ffd700; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">Browse By Brand</h3>
+            <div id="brand-buttons" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 1100px; margin: 0 auto;">
+                <button class="filter-btn active" onclick="filterNews('all', this)">All</button>
+                <button class="filter-btn" onclick="filterNews('AlphaTheta', this)">AlphaTheta/Pioneer</button>
+                <button class="filter-btn" onclick="filterNews('Denon DJ', this)">Denon DJ</button>
+                <button class="filter-btn" onclick="filterNews('Rane', this)">Rane</button>
+                <button class="filter-btn" onclick="filterNews('Allen & Heath', this)">Allen & Heath</button>
+                <button class="filter-btn" onclick="filterNews('Technics', this)">Technics</button>
+                <button class="filter-btn" onclick="filterNews('Ecler', this)">Ecler</button>
+                <button class="filter-btn" onclick="filterNews('Reloop', this)">Reloop</button>
+                <button class="filter-btn" onclick="filterNews('Akai Pro', this)">Akai Pro</button>
+                <button class="filter-btn" onclick="filterNews('Roland', this)">Roland</button>
+                <button class="filter-btn" onclick="filterNews('Native Instruments', this)">Native Instruments</button>
+                <button class="filter-btn" onclick="filterNews('Arturia', this)">Arturia</button>
+                <button class="filter-btn" onclick="filterNews('Teenage Engineering', this)">Teenage Engineering</button>
+                <button class="filter-btn" onclick="filterNews('Universal Audio', this)">Universal Audio</button>
+                <button class="filter-btn" onclick="filterNews('SSL', this)">SSL</button>
+                <button class="filter-btn" onclick="filterNews('Focusrite', this)">Focusrite</button>
+                <button class="filter-btn" onclick="filterNews('Genelec', this)">Genelec</button>
+                <button class="filter-btn" onclick="filterNews('KRK', this)">KRK</button>
+                <button class="filter-btn" onclick="filterNews('Mackie', this)">Mackie</button>
+                <button class="filter-btn" onclick="filterNews('Sennheiser', this)">Sennheiser</button>
+                <button class="filter-btn" onclick="filterNews('Shure', this)">Shure</button>
+                <button class="filter-btn" onclick="filterNews('AIAIAI', this)">AIAIAI</button>
+            </div>
+        </div>
+
+        <div class="news-grid" id="news-container" style="margin-top: 40px;"></div>
+    </div>
+
+    <div class="network-footer">
+        <h4>Explore The Dubai Tech Network</h4>
+        <div class="network-links">
+            <a href="https://kalpdev2010-hub.github.io/dubai-cinema-guide/" target="_blank">Home Cinema Guide</a>
+            <a href="https://kalpdev2010-hub.github.io/dubai-dj-guide/" target="_blank">Pro DJ Guide</a>
+            <a href="https://kalpdev2010-hub.github.io/dubai-gaming-guide/" target="_blank">Gaming Setup Guide</a>
+        </div>
+    </div>
+
+    <script>
+        let allIssues = [];
+
+        function fetchNews() {
+            // Target changed to DJ Guide repository
+            fetch('https://api.github.com/repos/kalpdev2010-hub/dubai-dj-guide/issues?state=open')
+                .then(response => response.json())
+                .then(issues => {
+                    allIssues = issues;
+                    renderCards(issues);
+                })
+                .catch(err => console.error("Error loading news feed:", err));
+        }
+
+        function renderCards(issues) {
+            const container = document.getElementById('news-container');
+            container.innerHTML = ''; 
+
+            if (issues.length === 0) {
+                container.innerHTML = `
+                    <div style="
+                        color: white; 
+                        text-align: center; 
+                        grid-column: 1 / -1; 
+                        width: 100%; 
+                        padding: 100px 20px; 
+                        font-family: 'Inter', sans-serif;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                        opacity: 0.7;
+                    ">
+                        No gear updates found yet. Stay tuned!
+                    </div>`;
+                return;
+            }
+
+            issues.forEach(issue => {
+                const brand = issue.labels.length > 0 ? issue.labels[0].name : 'Pro Audio';
+                const date = new Date(issue.created_at).toLocaleDateString('en-AE', { day: 'numeric', month: 'short', year: 'numeric' });
+
+                const card = document.createElement('div');
+                card.className = 'news-card';
+                
+                card.innerHTML = `
+                    <div class="status-badge">GEAR RADAR</div>
+                    <div class="news-date">Spotted: ${date}</div>
+                    <h2 class="news-title">${brand} News</h2>
+                    <div class="news-headline">${issue.title}</div>
+                    <p class="news-desc" style="margin-top: 20px;">
+                        <a href="${issue.body}" target="_blank" style="color:#ffd700; text-decoration:none; font-weight:bold; border: 1px solid #ffd700; padding: 8px 15px; border-radius: 4px; display: inline-block;">Read Full Details ➔</a>
+                    </p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterNews(selectedBrand, btnElement) {
+            const allBtns = document.querySelectorAll('.filter-btn');
+            allBtns.forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            if (selectedBrand === 'all') {
+                renderCards(allIssues);
+            } else {
+                const filtered = allIssues.filter(issue => {
+                    const brandLabel = issue.labels.length > 0 ? issue.labels[0].name : '';
+                    return brandLabel.toLowerCase() === selectedBrand.toLowerCase();
+                });
+                renderCards(filtered);
+            }
+            
+            const scrollTarget = document.getElementById('brand-buttons');
+            if (scrollTarget) {
+                window.scrollTo({ top: scrollTarget.offsetTop - 20, behavior: 'smooth' });
+            }
+        }
+
+        fetchNews();    
+    </script>
+</body>
+</html>
