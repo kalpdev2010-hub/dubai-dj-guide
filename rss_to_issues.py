@@ -60,14 +60,10 @@ def create_github_issue(title, link, brand):
 for brand, rss_url in FEEDS.items():
     print(f"📡 Fetching live radar feed for: {brand}...")
     try:
-        # Hardened browser-profile headers to bypass automated datacenter blocks
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-            'Accept': 'application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.7',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Connection': 'keep-alive'
+            'Accept': 'application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.7'
         }
-        
         req = urllib.request.Request(rss_url, headers=headers)
         with urllib.request.urlopen(req, timeout=15) as response:
             tree = ET.parse(response)
@@ -75,6 +71,13 @@ for brand, rss_url in FEEDS.items():
             
             entries = root.findall('{http://www.w3.org/2005/Atom}entry')
             print(f"   Found {len(entries)} raw items for {brand}.")
+            
+            # DIAGNOSTIC ADMISSION: If Google gives us 0 items, print the inner shell tags
+            if len(entries) == 0:
+                print("   🔍 Diagnostic Alert: Printing hidden feed elements:")
+                for child in list(root)[:3]:
+                    clean_tag = child.tag.split('}')[-1] # strip namespace
+                    print(f"      ↳ Found Tag: <{clean_tag}> | Content: {child.text[:60] if child.text else 'None'}")
             
             for entry in entries[:5]:
                 title = entry.find('{http://www.w3.org/2005/Atom}title').text
@@ -85,3 +88,4 @@ for brand, rss_url in FEEDS.items():
                 
     except Exception as e:
         print(f"❌ Failed to read feed for {brand}. Reason: {e}")
+
