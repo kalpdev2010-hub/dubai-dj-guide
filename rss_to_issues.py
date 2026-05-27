@@ -56,33 +56,30 @@ def create_github_issue(title, link, brand):
     except Exception as e:
         print(f"❌ Error: {e}")
 
-# Updated processing loop to parse open-access standard blog RSS structures
+# Process feeds via the API broker to bypass data center blocks
 for brand, rss_url in FEEDS.items():
-    print(f"📡 Fetching live radar feed for: {brand}...")
+    print(f"📡 Requesting broker connection for: {brand}...")
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-            'Accept': 'application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.7'
-        }
-        req = urllib.request.Request(rss_url, headers=headers)
+        # Encodes the target link cleanly inside the broker API line
+        broker_url = f"https://api.rss2json.com/v1/api.json?rss_url={urllib.parse.quote_plus(rss_url)}"
+        
+        req = urllib.request.Request(broker_url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=15) as response:
-            tree = ET.parse(response)
-            root = tree.getroot()
+            data = json.loads(response.read().decode('utf-8'))
             
-            # Extracts items from standard RSS layout cleanly
-            items = root.findall('.//item')
-            print(f"   Found {len(items)} raw items for {brand}.")
-            
-            for item in items[:5]:
-                title_elem = item.find('title')
-                link_elem = item.find('link')
+            if data.get('status') == 'ok':
+                items = data.get('items', [])
+                print(f"   Success! Broker returned {len(items)} items for {brand}.")
                 
-                if title_elem is not None and link_elem is not None:
-                    title = title_elem.text
-                    clean_link = link_elem.text
-                    create_github_issue(title, clean_link, brand)
+                for item in items[:3]:
+                    title = item.get('title')
+                    link = item.get('link')
+                    if title and link:
+                        create_github_issue(title, link, brand)
+            else:
+                print(f"   ⚠️ Broker could not parse feed for {brand}")
                     
     except Exception as e:
-        print(f"❌ Error checking {brand}: {e}")
+        print(f"❌ Core link exception for {brand}: {e}")
 
 
