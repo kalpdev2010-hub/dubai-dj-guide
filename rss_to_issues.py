@@ -58,17 +58,30 @@ def create_github_issue(title, link, brand):
         print(f"❌ Error: {e}")
 
 for brand, rss_url in FEEDS.items():
+    print(f"📡 Fetching live radar feed for: {brand}...")
     try:
-        req = urllib.request.Request(rss_url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req) as response:
+        # Hardened browser-profile headers to bypass automated datacenter blocks
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+            'Accept': 'application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.7',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Connection': 'keep-alive'
+        }
+        
+        req = urllib.request.Request(rss_url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as response:
             tree = ET.parse(response)
             root = tree.getroot()
             
-            for entry in root.findall('{http://www.w3.org/2005/Atom}entry')[:5]:
+            entries = root.findall('{http://www.w3.org/2005/Atom}entry')
+            print(f"   Found {len(entries)} raw items for {brand}.")
+            
+            for entry in entries[:5]:
                 title = entry.find('{http://www.w3.org/2005/Atom}title').text
                 raw_link = entry.find('{http://www.w3.org/2005/Atom}link').attrib['href']
                 clean_link = raw_link.split('url=')[1].split('&ct=ga')[0] if 'url=' in raw_link else raw_link
                 
                 create_github_issue(title, clean_link, brand)
+                
     except Exception as e:
-        print(f"Error checking {brand}: {e}")
+        print(f"❌ Failed to read feed for {brand}. Reason: {e}")
