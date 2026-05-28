@@ -5,10 +5,10 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 import time
 
-# High-volume pro-audio and studio syndication feeds with open network firewalls
+# Corrected enterprise pro-audio channels with active endpoints
 MASTER_FEEDS = [
-    "https://www.musicradar.com/rss/news/tech",
-    "https://www.soundonsound.com/news.xml"
+    "https://www.musicradar.com/rss",
+    "https://www.soundonsound.com/news/sosrssfeed.php"
 ]
 
 BRANDS = [
