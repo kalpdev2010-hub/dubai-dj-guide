@@ -6,7 +6,6 @@ import xml.etree.ElementTree as ET
 import time
 import re
 
-# High-volume pro-audio and production channels with completely open access
 MASTER_FEEDS = [
     "https://www.gearnews.com/zone/pro-audio/feed/",
     "https://www.gearnews.com/zone/electronic-music/feed/",
@@ -58,14 +57,16 @@ for url in MASTER_FEEDS:
         with urllib.request.urlopen(req, timeout=15) as response:
             raw_bytes = response.read()
             
-            # Bulletproof encoding detection and text normalization
             try:
                 xml_data = raw_bytes.decode('utf-8')
             except UnicodeDecodeError:
                 xml_data = raw_bytes.decode('iso-8859-1', errors='ignore')
             
-            # ADVANCED REPAIR: Force-encodes ALL problematic ampersands in links or labels
-            xml_data = re.sub(r'&(?![A-Za-z0-9#]+;)', '&amp;', xml_data)
+            # 1. AMAMPERSAND CLEANER: Fixes unencoded link symbols
+            xml_data = re.sub(r'&(?!#?[a-zA-Z0-9]+;)', '&amp;', xml_data)
+            
+            # 2. DEEP-CLEAN SANITIZER: Purges all illegal XML hidden control characters
+            xml_data = re.sub(r'[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]', '', xml_data)
             
             root = ET.fromstring(xml_data)
             items = root.findall('.//item')
@@ -88,12 +89,12 @@ brand_counts = {b: 0 for b in BRANDS}
 
 for article in all_articles:
     title_lower = article["title"].lower()
+    matched_any = False
     
     for brand in BRANDS:
         if brand_counts[brand] >= 3:
             continue
             
-        # Flexible cross-matching rules for hardware variants
         keyword = brand.lower()
         if "denon" in keyword: keyword = "denon"
         if "akai" in keyword: keyword = "akai"
@@ -102,12 +103,17 @@ for article in all_articles:
             if "pioneer" in title_lower or "alphatheta" in title_lower:
                 create_github_issue(article["title"], article["link"], brand)
                 brand_counts[brand] += 1
+                matched_any = True
                 time.sleep(1)
                 continue
         
         if keyword in title_lower:
             create_github_issue(article["title"], article["link"], brand)
             brand_counts[brand] += 1
+            matched_any = True
             time.sleep(1)
+            
+    if not matched_any:
+        print(f"   ❌ Skipped (No brand match): {article['title']}")
 
 print("🏁 Automation process concluded cleanly.")
