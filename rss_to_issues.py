@@ -3,31 +3,20 @@ import json
 import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
+import time
 
-# Contains only the 21 links routed to the DJ Guide
-FEEDS = {
-    "Native Instruments": "https://www.gearnews.com/?s=Native+Instruments&feed=rss2",
-    "SSL": "https://www.gearnews.com/?s=SSL&feed=rss2",
-    "Teenage Engineering": "https://www.gearnews.com/?s=Teenage+Engineering&feed=rss2",
-    "Universal Audio": "https://www.gearnews.com/?s=Universal+Audio&feed=rss2",
-    "AlphaTheta": "https://www.gearnews.com/?s=AlphaTheta&feed=rss2",
-    "AIAIAI": "https://www.gearnews.com/?s=AIAIAI&feed=rss2",
-    "Akai Pro": "https://www.gearnews.com/?s=Akai+Pro&feed=rss2",
-    "Allen & Heath": "https://www.gearnews.com/?s=Allen+%26+Heath&feed=rss2",
-    "Arturia": "https://www.gearnews.com/?s=Arturia&feed=rss2",
-    "Denon DJ": "https://www.gearnews.com/?s=Denon+DJ&feed=rss2",
-    "Ecler": "https://www.gearnews.com/?s=Ecler&feed=rss2",
-    "Focusrite": "https://www.gearnews.com/?s=Focusrite&feed=rss2",
-    "Genelec": "https://www.gearnews.com/?s=Genelec&feed=rss2",
-    "KRK": "https://www.gearnews.com/?s=KRK&feed=rss2",
-    "Mackie": "https://www.gearnews.com/?s=Mackie&feed=rss2",
-    "Rane": "https://www.gearnews.com/?s=Rane&feed=rss2",
-    "Reloop": "https://www.gearnews.com/?s=Reloop&feed=rss2",
-    "Roland": "https://www.gearnews.com/?s=Roland&feed=rss2",
-    "Sennheiser": "https://www.gearnews.com/?s=Sennheiser&feed=rss2",
-    "Shure": "https://www.gearnews.com/?s=Shure&feed=rss2",
-    "Technics": "https://www.gearnews.com/?s=Technics&feed=rss2"
-}
+# High-volume pro-audio and studio syndication feeds with open network firewalls
+MASTER_FEEDS = [
+    "https://www.musicradar.com/rss/news/tech",
+    "https://www.soundonsound.com/news.xml"
+]
+
+BRANDS = [
+    "Native Instruments", "SSL", "Teenage Engineering", "Universal Audio", 
+    "AlphaTheta", "AIAIAI", "Akai Pro", "Allen & Heath", "Arturia", 
+    "Denon DJ", "Ecler", "Focusrite", "Genelec", "KRK", "Mackie", 
+    "Rane", "Reloop", "Roland", "Sennheiser", "Shure", "Technics"
+]
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO = "kalpdev2010-hub/dubai-dj-guide"
@@ -52,34 +41,53 @@ def create_github_issue(title, link, brand):
     req = urllib.request.Request(url, data=data, headers=headers)
     try:
         urllib.request.urlopen(req)
-        print(f"✅ Posted to Radar: {title}")
+        print(f"✅ Posted to Radar [{brand}]: {title}")
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"❌ GitHub API Error: {e}")
 
-# Process feeds via the API broker to bypass data center blocks
-for brand, rss_url in FEEDS.items():
-    print(f"📡 Requesting broker connection for: {brand}...")
+seen_links = set()
+all_articles = []
+
+for url in MASTER_FEEDS:
+    print(f"📡 Fetching open channel stream: {url}...")
     try:
-        # Encodes the target link cleanly inside the broker API line
-        broker_url = f"https://api.rss2json.com/v1/api.json?rss_url={urllib.parse.quote_plus(rss_url)}"
-        
-        req = urllib.request.Request(broker_url, headers={'User-Agent': 'Mozilla/5.0'})
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=15) as response:
-            data = json.loads(response.read().decode('utf-8'))
+            xml_data = response.read().decode('utf-8', errors='ignore')
+            root = ET.fromstring(xml_data)
+            items = root.findall('.//item')
             
-            if data.get('status') == 'ok':
-                items = data.get('items', [])
-                print(f"   Success! Broker returned {len(items)} items for {brand}.")
-                
-                for item in items[:3]:
-                    title = item.get('title')
-                    link = item.get('link')
-                    if title and link:
-                        create_github_issue(title, link, brand)
-            else:
-                print(f"   ⚠️ Broker could not parse feed for {brand}")
-                    
+            for item in items:
+                title_elem = item.find('title')
+                link_elem = item.find('link')
+                if title_elem is not None and link_elem is not None:
+                    t_text = title_elem.text
+                    l_text = link_elem.text
+                    if l_text not in seen_links:
+                        seen_links.add(l_text)
+                        all_articles.append({"title": t_text, "link": l_text})
     except Exception as e:
-        print(f"❌ Core link exception for {brand}: {e}")
+        print(f"⚠️ Channel skip warning: {e}")
 
+print(f"🔍 Sorting {len(all_articles)} live industry updates into brand blueprints...")
 
+brand_counts = {b: 0 for b in BRANDS}
+
+for article in all_articles:
+    title_lower = article["title"].lower()
+    
+    for brand in BRANDS:
+        if brand_counts[brand] >= 3:
+            continue
+            
+        keyword = brand.lower()
+        if "denon" in keyword: keyword = "denon"
+        if "akai" in keyword: keyword = "akai"
+        if "allen" in keyword: keyword = "allen"
+        
+        if keyword in title_lower:
+            create_github_issue(article["title"], article["link"], brand)
+            brand_counts[brand] += 1
+            time.sleep(1)
+
+print("🏁 Automation process concluded cleanly.")
