@@ -4,8 +4,9 @@ import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
 import time
+import re
 
-# Corrected enterprise pro-audio channels with active endpoints
+# High-volume pro-audio and studio syndication feeds with open network firewalls
 MASTER_FEEDS = [
     "https://www.musicradar.com/rss",
     "https://www.soundonsound.com/news/sosrssfeed.php"
@@ -54,6 +55,10 @@ for url in MASTER_FEEDS:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=15) as response:
             xml_data = response.read().decode('utf-8', errors='ignore')
+            
+            # SMART TEXT REPAIR: Automatically converts raw '&' symbols so Python doesn't crash
+            xml_data = re.sub(r'&(?!amp;|lt;|gt;|quot;|apos;)', '&amp;', xml_data)
+            
             root = ET.fromstring(xml_data)
             items = root.findall('.//item')
             
