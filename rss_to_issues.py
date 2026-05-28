@@ -6,8 +6,10 @@ import xml.etree.ElementTree as ET
 import time
 import re
 
-# High-volume pro-audio and studio syndication feeds with open network firewalls
+# High-volume pro-audio and production channels with completely open access
 MASTER_FEEDS = [
+    "https://www.gearnews.com/zone/pro-audio/feed/",
+    "https://www.gearnews.com/zone/electronic-music/feed/",
     "https://www.musicradar.com/rss",
     "https://www.soundonsound.com/news/sosrssfeed.php"
 ]
@@ -54,10 +56,16 @@ for url in MASTER_FEEDS:
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=15) as response:
-            xml_data = response.read().decode('utf-8', errors='ignore')
+            raw_bytes = response.read()
             
-            # SMART TEXT REPAIR: Automatically converts raw '&' symbols so Python doesn't crash
-            xml_data = re.sub(r'&(?!amp;|lt;|gt;|quot;|apos;)', '&amp;', xml_data)
+            # Bulletproof encoding detection and text normalization
+            try:
+                xml_data = raw_bytes.decode('utf-8')
+            except UnicodeDecodeError:
+                xml_data = raw_bytes.decode('iso-8859-1', errors='ignore')
+            
+            # ADVANCED REPAIR: Force-encodes ALL problematic ampersands in links or labels
+            xml_data = re.sub(r'&(?![A-Za-z0-9#]+;)', '&amp;', xml_data)
             
             root = ET.fromstring(xml_data)
             items = root.findall('.//item')
@@ -85,10 +93,17 @@ for article in all_articles:
         if brand_counts[brand] >= 3:
             continue
             
+        # Flexible cross-matching rules for hardware variants
         keyword = brand.lower()
         if "denon" in keyword: keyword = "denon"
         if "akai" in keyword: keyword = "akai"
         if "allen" in keyword: keyword = "allen"
+        if "pioneer" in keyword or "alphatheta" in keyword:
+            if "pioneer" in title_lower or "alphatheta" in title_lower:
+                create_github_issue(article["title"], article["link"], brand)
+                brand_counts[brand] += 1
+                time.sleep(1)
+                continue
         
         if keyword in title_lower:
             create_github_issue(article["title"], article["link"], brand)
