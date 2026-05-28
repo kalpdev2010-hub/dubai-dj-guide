@@ -2,9 +2,9 @@ import os
 import json
 import urllib.request
 import urllib.parse
-import xml.etree.ElementTree as ET
 import time
 import re
+import html
 
 MASTER_FEEDS = [
     "https://www.gearnews.com/zone/pro-audio/feed/",
@@ -62,21 +62,25 @@ for url in MASTER_FEEDS:
             except UnicodeDecodeError:
                 xml_data = raw_bytes.decode('iso-8859-1', errors='ignore')
             
-            # 1. AMAMPERSAND CLEANER: Fixes unencoded link symbols
-            xml_data = re.sub(r'&(?!#?[a-zA-Z0-9]+;)', '&amp;', xml_data)
+            # UNBREAKABLE TEXT BLOCK EXTRACTOR: Skips strict parsing validation entirely
+            raw_items = re.findall(r'<item>(.*?)</item>', xml_data, re.DOTALL)
             
-            # 2. DEEP-CLEAN SANITIZER: Purges all illegal XML hidden control characters
-            xml_data = re.sub(r'[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]', '', xml_data)
-            
-            root = ET.fromstring(xml_data)
-            items = root.findall('.//item')
-            
-            for item in items:
-                title_elem = item.find('title')
-                link_elem = item.find('link')
-                if title_elem is not None and link_elem is not None:
-                    t_text = title_elem.text
-                    l_text = link_elem.text
+            for item_str in raw_items:
+                t_match = re.search(r'<title>(.*?)</title>', item_str, re.DOTALL)
+                l_match = re.search(r'<link>(.*?)</link>', item_str, re.DOTALL)
+                
+                if t_match and l_match:
+                    # Strip away CDATA envelopes cleanly
+                    t_text = re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', t_match.group(1), flags=re.DOTALL).strip()
+                    l_text = re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', l_match.group(1), flags=re.DOTALL).strip()
+                    
+                    # Remove hidden layout markers
+                    t_text = re.sub(r'<[^>]+>', '', t_text)
+                    l_text = re.sub(r'<[^>]+>', '', l_text)
+                    
+                    t_text = html.unescape(t_text)
+                    l_text = html.unescape(l_text)
+                    
                     if l_text not in seen_links:
                         seen_links.add(l_text)
                         all_articles.append({"title": t_text, "link": l_text})
