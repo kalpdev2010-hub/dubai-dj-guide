@@ -65,9 +65,9 @@
       {
         "tierName": "1. Kids Zone",
         "items": [
+          { "brand": "Numark", "model": "MIXTRACKGO", "badge": "PORTABLE", "description": "Ultra-portable controller for beginners.", "searchQuery": "Numark MIXTRACKGO" },
+          { "brand": "Numark", "model": "PARTYMIXIII", "badge": "LIGHT SHOW", "description": "Built-in light show and easy setup.", "searchQuery": "Numark PARTYMIXIII" },
           { "brand": "Alpha Theta", "model": "DDJ-FLX2", "badge": "FUN ENTRY", "description": "Compact and fun entry for young DJs.", "searchQuery": "Alpha Theta DDJ-FLX2" },
-          { "brand": "Numark", "model": "PARTYMIXLIVE", "badge": "BUILT-IN SPEAKERS", "description": "Built-in light show and speakers.", "searchQuery": "Numark PARTYMIXLIVE" },
-          { "brand": "Reloop", "model": "BUDDY", "badge": "TABLET MIXING", "description": "Great for mobile and tablet mixing.", "searchQuery": "Reloop BUDDY" },
           { "brand": "Hercules", "model": "DJ STARTER KIT", "badge": "BUNDLE", "description": "Complete unbox-and-play bundle.", "searchQuery": "Hercules DJ STARTER KIT" }
         ]
       },
@@ -106,8 +106,8 @@
     "tiers": [
       {
         "tierName": "1. Beginner",
-        "items": [
-          { "brand": "Pioneer DJ", "model": "XDJ-RR", "badge": "CLUB LAYOUT", "description": "Standard club layout in a 2-channel rig.", "searchQuery": "Pioneer XDJ-RR" },
+       "items": [
+          { "brand": "Alpha Theta", "model": "XDJ-AZ", "badge": "CLUB LAYOUT", "description": "Next-gen 4-channel standalone DJ system.", "searchQuery": "Alpha Theta XDJ-AZ" },
           { "brand": "Numark", "model": "MIXSTREAMPRO+", "badge": "STREAMING", "description": "Built-in speakers and streaming.", "searchQuery": "Numark MIXSTREAMPRO+" },
           { "brand": "Numark", "model": "MIXSTREAMPROGO", "badge": "BATTERY POWERED", "description": "Battery-powered for total freedom.", "searchQuery": "Numark MIXSTREAMPROGO" }
         ]
@@ -139,8 +139,8 @@
         "items": [
           { "brand": "Alpha Theta", "model": "CDJ3000X", "badge": "NEXT GEN", "description": "Next-generation flagship media player with advanced performance features.", "searchQuery": "Alpha Theta CDJ3000X" },
           { "brand": "Pioneer DJ", "model": "CDJ3000", "badge": "GLOBAL STANDARD", "description": "The undisputed global club standard multi player.", "searchQuery": "Pioneer CDJ3000" },
-          { "brand": "Denon DJ", "model": "SC6000PRIME", "badge": "DUAL LAYER", "description": "Powerful ultimate mainstage media player with dual-layer playback.", "searchQuery": "Denon DJ SC6000PRIME" },
-          { "brand": "Denon DJ", "model": "SC6000MPRIME", "badge": "MOTORIZED PLATTER", "description": "Flagship media player featuring a motorized platter for a true vinyl feel.", "searchQuery": "Denon DJ SC6000MPRIME" }
+          { "brand": "Alpha Theta", "model": "CDJ-1500X", "badge": "PERFORMANCE", "description": "High-performance multi-player for professional setups.", "searchQuery": "Alpha Theta CDJ-1500X" },
+          { "brand": "Denon DJ", "model": "SC6000PRIME", "badge": "DUAL LAYER", "description": "Powerful ultimate mainstage media player with dual-layer playback.", "searchQuery": "Denon DJ SC6000PRIME" }
         ]
       }
     ]
