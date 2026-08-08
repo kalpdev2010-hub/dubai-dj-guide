@@ -107,7 +107,7 @@
       {
         "tierName": "1. Beginner",
        "items": [
-          { "brand": "Alpha Theta", "model": "XDJ-AZ", "badge": "CLUB LAYOUT", "description": "Next-gen 4-channel standalone DJ system.", "searchQuery": "Alpha Theta XDJ-AZ" },
+          { "brand": "Alpha Theta", "model": "XDJ-AN", "badge": "CLUB LAYOUT", "description": "Next-gen standalone DJ system for beginners.", "searchQuery": "Alpha Theta XDJ-AN" },
           { "brand": "Numark", "model": "MIXSTREAMPRO+", "badge": "STREAMING", "description": "Built-in speakers and streaming.", "searchQuery": "Numark MIXSTREAMPRO+" },
           { "brand": "Numark", "model": "MIXSTREAMPROGO", "badge": "BATTERY POWERED", "description": "Battery-powered for total freedom.", "searchQuery": "Numark MIXSTREAMPROGO" }
         ]
